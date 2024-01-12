@@ -37,6 +37,11 @@ const recognizers: Recognizer[] = [
     pattern: "ADOBE .*PRODUCTS 408-536-6000 CA",
   },
   {
+    "category": Category.ENTERTAINMENT,
+    "vendor": "Apple",
+    "pattern": "APPLE.COM/BILL ONE APPLE PARK WAY 866-712-7753 95014 CA USA"
+  },
+  {
     category: Category.CREDIT_CARD_PAYMENT,
     vendor: null,
     pattern: "AUTOMATIC PAYMENT - THANK YOU",
@@ -100,6 +105,11 @@ const recognizers: Recognizer[] = [
     category: Category.CREDIT_CARD_PAYMENT,
     vendor: "BofA",
     pattern: "BANK OF AMERICA CREDIT CARD Bill Payment",
+  },
+  {
+    "category": Category.HOBBIES,
+    "vendor": 'Brookline Bird Club',
+    "pattern": "BROOKLINE \\* .* MA"
   },
   {
     category: Category.HOBBIES,
@@ -231,6 +241,11 @@ const recognizers: Recognizer[] = [
     category: Category.CREDIT_CARD_PAYMENT,
     vendor: "Discover",
     pattern: "DISCOVER DES:E-PAYMENT ",
+  },
+  {
+    "category": Category.GROCERIES,
+    "vendor": 'Earth Breeze',
+    "pattern": "EARTH BREEZE INC"
   },
   {
     category: Category.TRAVEL,
@@ -445,7 +460,7 @@ const recognizers: Recognizer[] = [
   {
     category: Category.GROCERIES,
     vendor: "Pemberton",
-    pattern: "PEMBERTON FARM ",
+    pattern: "PEMBERTON FARM",
   },
   {
     category: Category.CAR,
@@ -550,12 +565,12 @@ const recognizers: Recognizer[] = [
   {
     category: Category.LUXURY_FOOD,
     vendor: "Chequessett Chocolate",
-    pattern: "SQ *CHEQUESSETT CHOCOL560 HARRISON AVENUE BOSTON 02118 MA USA",
+    pattern: "SQ .*CHEQUESSETT CHOCOL560 HARRISON AVENUE BOSTON 02118 MA USA",
   },
   {
     category: Category.DINING,
     vendor: "Medford Brewing",
-    pattern: "SQ *MEDFORD BREWING CO441-481 HIGHWAY 60 MEDFORD 02155 MA USA",
+    pattern: "SQ .*MEDFORD BREWING CO441-481 HIGHWAY 60 MEDFORD 02155 MA USA",
   },
   {
     category: Category.LUXURY_FOOD,
@@ -565,7 +580,7 @@ const recognizers: Recognizer[] = [
   {
     category: Category.DINING,
     vendor: "The Bread Shop",
-    pattern: "SQ .*THE BREAD SHOP .* Wakefield MA",
+    pattern: "SQ .*THE BREAD SHOP .* Wakefield",
   },
   {
     category: Category.DINING,
