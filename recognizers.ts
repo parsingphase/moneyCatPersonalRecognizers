@@ -117,12 +117,12 @@ const recognizers: Recognizer[] = [
     pattern: "APPLE.COM/BILL ",
   },
   {
-    category: Category.HOME_HARDWARE,
+    category: Category.ELECTRONICS,
     vendor: "Apple",
     pattern: "APPLE.COM/US ",
   },
   {
-    category: Category.HOME_HARDWARE,
+    category: Category.ELECTRONICS,
     vendor: "Apple",
     pattern: "APPLE STORE #",
   },
@@ -227,7 +227,7 @@ const recognizers: Recognizer[] = [
     pattern: /BKOFAMERICA MOBILE .* DEPOSIT/,
   },
   {
-    category: null,
+    category: Category.BANK_FEES,
     vendor: "BofA",
     pattern: "Bank of America DES:CASHREWARD ",
   },
@@ -272,7 +272,7 @@ const recognizers: Recognizer[] = [
     pattern: "BWD MAGAZINE 8122418995 IN",
   },
   {
-    category: Category.GROCERIES,
+    category: Category.PERSONAL_CARE,
     vendor: "The Body Shop",
     pattern: "Buth-Na-Bodhaige",
   },
@@ -413,6 +413,11 @@ const recognizers: Recognizer[] = [
     pattern: "D'AGOSTINO'S FOODS ARLINGTON",
   },
   {
+    category: Category.MISC,
+    vendor: "AppleCard",
+    pattern: "DAILY CASH ADJUSTMENT",
+  },
+  {
     category: Category.CREDIT_CARD_PAYMENT,
     vendor: "Discover",
     pattern: "DIRECTPAY FULL BALANCESEE DETAILS OF YOUR NEXT DIRECTPAY BELOW",
@@ -474,8 +479,8 @@ const recognizers: Recognizer[] = [
   },
 
   {
-    category: null,
-    vendor: null,
+    category: Category.LUXURY_FOOD,
+    vendor: "Eataly",
     pattern: "EATALY NET USA LLC 43 W 23 ST, 7 FL NEW YORK 10010 NY USA",
   },
   {
@@ -539,6 +544,11 @@ const recognizers: Recognizer[] = [
     pattern: "GANDI NET STRASSEN",
   },
   {
+    category: Category.CLOTHING,
+    vendor: "Gap",
+    pattern: "GAP US 1492 900 MARKET STREET LYNNFIELD 01940 MA USA",
+  },
+  {
     category: Category.CHARITY,
     vendor: "GBFB",
     pattern: "GBFB.ORG",
@@ -549,9 +559,19 @@ const recognizers: Recognizer[] = [
     pattern: /GEICO .*AUTO /,
   },
   {
+    category: Category.HEALTH,
+    vendor: "Gentle Dental",
+    pattern: "GENTLE DENTAL CAMBRIDGE CAMBRIDGE MA",
+  },
+  {
+    category: Category.CHARITY,
+    vendor: "GoFundMe",
+    pattern: "GFM*",
+  },
+  {
     category: Category.MEDIA,
     vendor: "Boston Globe",
-    pattern: "GNC.BOSTON GLOBE SUBS 888-694-5623 MA",
+    pattern: "GNC*BOSTON GLOBE SUBS 888-694-5623 MA",
   },
   {
     category: Category.MORTGAGE,
@@ -604,6 +624,11 @@ const recognizers: Recognizer[] = [
     pattern: "HOLIDAY INN ",
   },
   {
+    category: Category.HOME_MAINTENANCE,
+    vendor: "American Home Shield",
+    pattern: "HOME* AHS.COM MEMPHIS TN",
+  },
+  {
     category: Category.GROCERIES,
     vendor: "The Honeybaked Ham Company",
     pattern: "HONEYBAKED HAM ",
@@ -611,7 +636,7 @@ const recognizers: Recognizer[] = [
   {
     category: Category.DINING,
     vendor: "Hopothecary",
-    pattern: "HOPOTHECARY BREWERY AN303 MAIN ST NORTH READING01864 MA USA",
+    pattern: /HOPOTHECARY/,
   },
   {
     category: Category.HOME_HARDWARE,
@@ -696,7 +721,7 @@ const recognizers: Recognizer[] = [
   {
     category: Category.ENTERTAINMENT,
     vendor: "Native Plant Trust",
-    pattern: "LS NATIVE PLANT TRUST 180 HEMENWAY ROAD FRAMINGHAM 01701 MA USA",
+    pattern: "LS NATIVE PLANT TRUST ",
   },
   {
     category: Category.DINING,
@@ -705,7 +730,7 @@ const recognizers: Recognizer[] = [
   },
   {
     category: Category.GARDEN,
-    vendor: null,
+    vendor: "Mahoneys",
     pattern: "MAHONEYS ROCKY LEDGE 242 CAMBRIDGE ST WINCHESTER 01890 MA USA",
   },
   {
@@ -716,7 +741,7 @@ const recognizers: Recognizer[] = [
   {
     category: Category.GROCERIES,
     vendor: "Market Basket",
-    pattern: "MARKET BASKET ",
+    pattern: "MARKET BASK",
   },
   {
     category: Category.ENTERTAINMENT,
@@ -724,9 +749,49 @@ const recognizers: Recognizer[] = [
     pattern: "MASS AUDUBON",
   },
   {
+    category: Category.DINING,
+    vendor: "McDonald's",
+    pattern: "MCDONALD'S ",
+  },
+  {
+    category: Category.LUXURY_FOOD,
+    vendor: "McDonoughs Liquors",
+    pattern: "MCDONOUGHS LIQUORS ",
+  },
+  {
     category: Category.HOBBIES,
     vendor: "Michaels",
     pattern: "MICHAELS STORES ",
+  },
+  {
+    category: Category.HOBBIES,
+    vendor: "Micro Center",
+    pattern: "MICRO CENTER ",
+  },
+  {
+    category: Category.ONLINE_SERVICES,
+    vendor: "Microsoft",
+    pattern: "MICROSOFT*SUBSCRIPTION MSBILL.INFO WA",
+  },
+  {
+    category: Category.DINING,
+    vendor: "Minglewood Harborside",
+    pattern: "MINGLEWOOD HARBORSIDE ",
+  },
+  {
+    category: Category.COMMUNICATIONS, // iPhone?
+    vendor: "Apple",
+    pattern: /MONTHLY INSTALLMENTS \(\d+ OF 24\)/,
+  },
+  {
+    category: Category.ONLINE_SERVICES,
+    vendor: "Flickr",
+    pattern: "FLICKR.COM MOUNTAIN VIEWCA",
+  },
+  {
+    category: Category.BANK_FEES,
+    vendor: null,
+    pattern: "FOREIGN TRANSACTION FEE",
   },
   {
     category: Category.ONLINE_SERVICES,
@@ -744,6 +809,21 @@ const recognizers: Recognizer[] = [
     pattern: "NAKEDWINES.COM ",
   },
   {
+    category: Category.CHARITY,
+    vendor: "National Audubon Society",
+    pattern: "NATIONAL AUDUBON SOCIE 212-9793000 NY",
+  },
+  {
+    category: Category.MISC,
+    vendor: null,
+    pattern: "NAYAX VENDING 45 11350 MCCORMICK RD HUNT VALLEY 21031 MD USA",
+  },
+  {
+    category: Category.ENTERTAINMENT,
+    vendor: "NEAQ",
+    pattern: "NEW ENG AQUARIUM ",
+  },
+  {
     category: Category.ENTERTAINMENT,
     vendor: "NEAQ",
     pattern: "NEW ENGLAND AQUARIUM ",
@@ -751,7 +831,12 @@ const recognizers: Recognizer[] = [
   {
     category: Category.ENTERTAINMENT,
     vendor: "NESN",
-    pattern: "NEW ENGLAND SPORTS NET480 ARSENAL WAY WATERTOWN 02472 MA USA",
+    pattern: "NEW ENGLAND SPORTS NET",
+  },
+  {
+    category: Category.DINING,
+    vendor: "New York Lunch",
+    pattern: "NEW YORK LUNCH",
   },
   {
     category: Category.HOME_HARDWARE,
@@ -759,9 +844,19 @@ const recognizers: Recognizer[] = [
     pattern: "NORDICTRACK 8336804348",
   },
   {
+    category: Category.LUXURY_FOOD,
+    vendor: "North Woburn Liquors",
+    pattern: "NORTH WOBURN LIQUORS WOBURN MAAPPLE PAY ENDING IN 8080",
+  },
+  {
+    category: Category.CAR,
+    vendor: "One Kendall Parking",
+    pattern: "ONE KENDALL PARKING 389 BINNEY ST CAMBRIDGE 02139 MA USA",
+  },
+  {
     category: Category.ONLINE_SERVICES,
     vendor: "Wirecutter",
-    pattern: "NYTimes.NYTimes 800-698-4637 NY",
+    pattern: "NYTimes*NYTimes 800-698-4637 NY",
   },
   {
     category: Category.TRANSFER,
@@ -777,6 +872,11 @@ const recognizers: Recognizer[] = [
     category: Category.DINING,
     vendor: "Panera",
     pattern: "PANERA BREAD ",
+  },
+  {
+    category: Category.HOBBIES,
+    vendor: "Partsbuilt 3D",
+    pattern: "PARTSBUILT ",
   },
   {
     category: Category.SALARY,
@@ -807,6 +907,11 @@ const recognizers: Recognizer[] = [
     category: Category.CAR,
     vendor: "Prestige Car Wash",
     pattern: "PRESTIGE DRB SOMERVILLE ",
+  },
+  {
+    category: Category.MEDIA,
+    vendor: "Amazon",
+    pattern: "PRIME VIDEO ",
   },
   {
     category: Category.ENTERTAINMENT,
@@ -849,9 +954,29 @@ const recognizers: Recognizer[] = [
     pattern: /RMV DANVERS 10 .* PURCHASE DANVERS MA/,
   },
   {
+    category: Category.LUXURY_FOOD,
+    vendor: "Russell Orchards",
+    pattern: "RUSSELL ORCHARDS ",
+  },
+  {
     category: Category.GROCERIES,
     vendor: "S&M Liquor",
     pattern: "S&M LIQUOR ",
+  },
+  {
+    category: Category.DINING,
+    vendor: "Sakura",
+    pattern: "SAKURA ORGANIC WAKEFIELD MA",
+  },
+  {
+    category: Category.HOME_HARDWARE,
+    vendor: "Sleep Number",
+    pattern: "SELECT COMFORT 10000 800-472-7185 MN0000596821",
+  },
+  {
+    category: Category.DINING,
+    vendor: "Shake Shack",
+    pattern: "SHAKE SHACK ",
   },
   {
     category: Category.GROCERIES,
@@ -859,10 +984,87 @@ const recognizers: Recognizer[] = [
     pattern: "SHAWS ",
   },
   {
+    category: Category.CAR,
+    vendor: "Shell Oil",
+    pattern: "SHELL OIL ",
+  },
+  {
+    category: Category.CHARITY,
+    vendor: "Sierra Club",
+    pattern: "SIERRA CLUB ",
+  },
+  {
     category: Category.HOBBIES,
     vendor: "Smashrun",
     pattern: "SMASHRUN----PROMEMBER 9173103858 NY",
   },
+
+  {
+    category: Category.DINING,
+    vendor: "Soup Shack",
+    pattern: "SOUP SHACK PORTER SQUA9 WHITE ST CAMBRIDGE 02140 MA USA",
+  },
+  {
+    category: Category.MISC,
+    vendor: "Bellzi",
+    pattern: "SP BELLZI.COM CHINO CA",
+  },
+  {
+    category: Category.CLOTHING,
+    vendor: "Bird Collective",
+    pattern: "SP BIRD COLLECTIVE BROOKLYN NY",
+  },
+  {
+    category: Category.ELECTRONICS,
+    vendor: "Ember",
+    pattern: "SP EMBER-US WESTLAKE VILLCA",
+  },
+  {
+    category: Category.ELECTRONICS,
+    vendor: "Eufy",
+    pattern: "SP EUFY US BELLEVUE WA",
+  },
+  {
+    category: Category.MEDIA,
+    vendor: "False Knees",
+    pattern: "SP FALSE KNEES STORE GUELPH ON",
+  },
+  {
+    category: Category.HOBBIES,
+    vendor: "GL Robotics",
+    pattern: "SP GL ROBOTICS DOTHAN AL",
+  },
+  {
+    category: Category.HOBBIES,
+    vendor: "Mintion",
+    pattern: "SP HK MINTION KOWLOON KL",
+  },
+  {
+    category: Category.HOME_HARDWARE, // magnets?
+    vendor: "Kat Maus Haus",
+    pattern: "SP KAT MAUS HAUS ILL 36 LARCH STREET BRIGHTON 02135 MA USA",
+  },
+  {
+    category: Category.GROCERIES,
+    vendor: "La Colombe",
+    pattern: "SP LA COLOMBE COFFEE PHILADELPHIA PA",
+  },
+  {
+    category: Category.HOBBIES,
+    vendor: "Polymaker 3D",
+    pattern: "SP POLYMAKER 3D PRIN MISSOURI CITYTX",
+  },
+  {
+    category: Category.HOBBIES,
+    vendor: "Printed Solid",
+    pattern: "SP PRINTED SOLID, IN NEWARK DE",
+  },
+  {
+    category: Category.HOME_HARDWARE,
+    vendor: "Ruggable",
+    pattern: "SP RUGGABLE.COM VERNON CA",
+  },
+
   {
     category: Category.HOME_HARDWARE,
     vendor: "SimpleHuman",
@@ -971,7 +1173,7 @@ const recognizers: Recognizer[] = [
   {
     category: Category.HOME_HARDWARE,
     vendor: "Staples",
-    pattern: /STAPLES .* MA USA/,
+    pattern: "STAPLES ",
   },
   {
     category: Category.GROCERIES,
@@ -987,6 +1189,21 @@ const recognizers: Recognizer[] = [
     category: Category.GROCERIES,
     vendor: "Stop & Shop",
     pattern: "STOP & SHOP ",
+  },
+  {
+    category: Category.DINING,
+    vendor: "Plazita",
+    pattern: "STORE*PLAZITA MEXICO T303 2ND STREETSUITE 800 SAN FRANCISCO94107 CA USA",
+  },
+  {
+    category: Category.DINING,
+    vendor: "Summer Shack",
+    pattern: "SUMMER SHACK ",
+  },
+  {
+    category: Category.PERSONAL_CARE,
+    vendor: "Supercuts",
+    pattern: "SUPERCUTS ",
   },
   {
     category: Category.UTILITIES,
@@ -1019,6 +1236,11 @@ const recognizers: Recognizer[] = [
     pattern: /TD BANK, NA DES:WEB PMT .* WEB/,
   },
   {
+    category: Category.PERSONAL_CARE,
+    vendor: "The Body Shop",
+    pattern: "THE BODY SHOP BUTH-NA",
+  },
+  {
     category: Category.GROCERIES,
     vendor: "The Farmland",
     pattern: "THE FARM ",
@@ -1031,7 +1253,7 @@ const recognizers: Recognizer[] = [
   {
     category: Category.DINING,
     vendor: "The Gingerbread Construction Company",
-    pattern: /THE GINGERBREAD CONSTRU .* PURCHASE WAKEFIELD MA/,
+    pattern: "THE GINGERBREAD CONSTR",
   },
   {
     category: Category.HOME_HARDWARE,
@@ -1056,17 +1278,27 @@ const recognizers: Recognizer[] = [
   {
     category: Category.HOME_HARDWARE,
     vendor: "Thermoworks",
-    pattern: "THERMOWORKS, INC. 741 E UTAH VALLEY DRIVE 8017567705 84003 UT USA",
+    pattern: "THERMOWORKS",
   },
   {
     category: Category.GROCERIES,
     vendor: "Thistle & Shamrock",
-    pattern: /THISTLE & SHAMROCK .* PURCHASE CAMBRIDGE MA/,
+    pattern: "THISTLE & SHAMROCK",
+  },
+  {
+    category: Category.GROCERIES,
+    vendor: "Thistle & Shamrock",
+    pattern: "THISTLE AND SHAMROCK",
   },
   {
     category: Category.COMMUNICATIONS,
     vendor: "T-mobile",
     pattern: "T-MOBILE STORE # 4ESA 75 MIDDLESEX TPKE STE 2113B BURLINGTON 01803 MA USA",
+  },
+  {
+    category: Category.HOBBIES,
+    vendor: "Topaz Labs",
+    pattern: "TOPAZ LABS ",
   },
   {
     category: Category.LUXURY_FOOD,
@@ -1132,7 +1364,7 @@ const recognizers: Recognizer[] = [
   {
     category: Category.ENTERTAINMENT,
     vendor: "Untappd",
-    pattern: "UNTAPPD INSIDERS CHARLOTTE NC",
+    pattern: "UNTAPPD",
   },
   {
     category: Category.HOME_HARDWARE,
@@ -1148,6 +1380,11 @@ const recognizers: Recognizer[] = [
     category: Category.COMMUNICATIONS,
     vendor: "Verizon",
     pattern: "VERIZON WIRELESS DES:PAYMENTS",
+  },
+  {
+    category: Category.GARDEN,
+    vendor: "Vermont Wildflower Farm",
+    pattern: "VT WILDFLOWER FARM 802-425-3641 VT",
   },
   {
     category: Category.DINING,
@@ -1210,9 +1447,210 @@ const recognizers: Recognizer[] = [
     pattern: "YARD HOUSE ",
   },
   {
+    category: Category.ELECTRONICS,
+    vendor: "Yubico",
+    pattern: "YUBICO INC. 5201 GREAT AMERICA PKWY #122 SANTA CLARA 95054 CA USA",
+  },
+  {
+    category: Category.TRAVEL,
+    vendor: "Zipcar",
+    pattern: "ZIPCAR TRIP APR02 35 THOMSON PLACE BOSTON 02210 MA USA",
+  },
+  {
     category: Category.ENTERTAINMENT,
     vendor: "Zoo New England",
     pattern: "ZOO NEW ENGLAND 02/10 PURCHASE XXX-XX92000 MA",
+  },
+
+  {
+    category: Category.MISC,
+    vendor: "City Of Cambridge",
+    pattern: "CITY OF CAMBRIDGE, MA 6525 CROWN BLVD#41340 SAN JOSE 95160 CO USA",
+  },
+  {
+    category: Category.MISC,
+    vendor: "City Of Salem",
+    pattern: "CITY OF SALEM, MA 128 S TRYON ST STE 1000 CHARLOTTE 28208 NC USA",
+  },
+  {
+    category: Category.HOBBIES,
+    vendor: "Field Notes",
+    pattern: "FIELD NOTES 3122431107 IL",
+  },
+  {
+    category: Category.CHARITY,
+    vendor: "GoFundMe",
+    pattern: "GOFUNDME HELP TO PROTE REDWOOD CITY CA",
+  },
+  {
+    category: Category.MISC,
+    vendor: null,
+    pattern: "GOPOD MOBILE PURCHASE 1 SCIENCE PARK, BOSTON 02114 MA USA",
+  },
+  {
+    category: Category.CAR,
+    vendor: "Gulf Oil",
+    pattern: "GULF EXPRESS",
+  },
+  {
+    category: Category.CAR,
+    vendor: "Gulf Oil",
+    pattern: "GULF OIL ",
+  },
+  {
+    category: Category.MISC,
+    vendor: "Just Lewes",
+    pattern: "JUST LEWES LEWES DE",
+  },
+  {
+    category: Category.MISC,
+    vendor: "M&S",
+    pattern: "MARKS&SPENCER PLC",
+  },
+  {
+    category: Category.MISC,
+    vendor: null,
+    pattern: "MBTA HARVARD CAMBRIDGE",
+  },
+  {
+    category: Category.MISC,
+    vendor: null,
+    pattern: "MBTA PARK ENFORCEMENT 10 PARK PLZ BOSTON 02116 MA USA",
+  },
+  {
+    category: Category.MISC,
+    vendor: null,
+    pattern: "MBTA PAY BY PHONE BOSTON MA",
+  },
+  {
+    category: Category.DINING,
+    vendor: "MoS",
+    pattern: "MOS CAFE QPS1 SCIENCE PARK BOSTON 02114 MA USA",
+  },
+  {
+    category: Category.CAR,
+    vendor: "MoS Parking",
+    pattern: "PARKING-MUSEUM OF SCI 1 SCIENCE PARK BOSTON 02114 MA USA",
+  },
+  {
+    category: Category.HOBBIES,
+    vendor: "Cults 3D",
+    pattern: "PAYPAL *CULTS3D",
+  },
+  {
+    category: Category.CHARITY,
+    vendor: null,
+    pattern: "PAYPAL *FOONETURING",
+  },
+  {
+    category: Category.CHARITY,
+    vendor: null,
+    pattern: "PAYPAL *GIVINGFUND GIVI 888-221-1161 CA",
+  },
+  {
+    category: Category.CHARITY,
+    vendor: null,
+    pattern: "PAYPAL *GOFUNDME HELP D 402-935-2244 CA",
+  },
+  {
+    category: Category.CASH,
+    vendor: null,
+    pattern: "PAYPAL *JO FUTYAN 402-935-7733 CA",
+  },
+  {
+    category: Category.HOBBIES,
+    vendor: null,
+    pattern: "PAYPAL *MNBRICKPALA BRI 888-221-1161 CA",
+  },
+  {
+    category: null,
+    vendor: null,
+    pattern: "PAYPAL *RL 402-935-7733 CA",
+  },
+  {
+    category: Category.HOBBIES,
+    vendor: null,
+    pattern: "PAYPAL *SEAN LIBERAPAY 888-221-1161 CA",
+  },
+  {
+    category: Category.ENTERTAINMENT,
+    vendor: "Peabody Essex Museum",
+    pattern: "PEM - ADMISSIONS 161 ESSEX ST SALEM 01970 MA USA",
+  },
+  {
+    category: null,
+    vendor: null,
+    pattern: "PHX TRIP ADVISOR SHOP PHOENIX",
+  },
+  {
+    category: Category.ELECTRONICS,
+    vendor: "Pi Shop",
+    pattern: "PI SHOP INC. 877-325-1799 DE",
+  },
+  {
+    category: Category.DINING,
+    vendor: "Simons Coffee Shop",
+    pattern: "PNT*SIMONS COFFEE SHOP",
+  },
+  {
+    category: Category.MEDIA,
+    vendor: "Birds And Blooms",
+    pattern: "RDA*BIRDS AND BLOOM 44 SOUTH BROADWAY WHITE PLAINS 10017 NY USA",
+  },
+  {
+    category: Category.GROCERIES,
+    vendor: "Star Market",
+    pattern: "STAR OSCO 2565 ",
+  },
+  {
+    category: Category.ENTERTAINMENT,
+    vendor: "Steam Games",
+    pattern: "STEAMGAMES.COM ",
+  },
+  {
+    category: Category.DINING,
+    vendor: "Tavern in the Square",
+    pattern: "TAVERN IN THE SQUARE",
+  },
+  {
+    category: Category.MISC,
+    vendor: "USPS",
+    pattern: "USPS CHANGE OF ADDRESS 800-238-3150 TN",
+  },
+  {
+    category: Category.MISC,
+    vendor: "USPS",
+    pattern: "USPS PO 2400730180 345 MAIN ST STONEHAM 02180 MA USA",
+  },
+  {
+    category: Category.HOME_HARDWARE,
+    vendor: "Walmart",
+    pattern: "WAL-MART ",
+  },
+  {
+    category: Category.HOME_HARDWARE,
+    vendor: "Walmart",
+    pattern: "WALMART STORE ",
+  },
+  {
+    category: Category.PERSONAL_CARE,
+    vendor: null,
+    pattern: "WALNUT VISION CARE MA 233 SPRING ST.6TH FL E NEW YORK 10013 NY USA",
+  },
+  {
+    category: Category.PERSONAL_CARE,
+    vendor: "Warby Parker",
+    pattern: "WARBY PARKER 233 SPRING ST 6TH FL EAST NEW YORK CITY10013 NY USA",
+  },
+  {
+    category: Category.GROCERIES,
+    vendor: "Whole Foods",
+    pattern: "WHOLEFDS ",
+  },
+  {
+    category: Category.HOME_HARDWARE,
+    vendor: "Kohls",
+    pattern: "WWW.KOHLS.COM ",
   },
 ];
 
