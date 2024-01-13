@@ -262,7 +262,7 @@ const recognizers: Recognizer[] = [
     pattern: "BONNELL FORD 353 CAMBRIDGE ST WINCHESTER 01890 MA USA",
   },
   {
-    category: Category.GROCERIES,
+    category: Category.LUXURY_FOOD,
     vendor: "British Stores",
     pattern: "BRITISH STORES LTD ",
   },
@@ -353,7 +353,7 @@ const recognizers: Recognizer[] = [
     pattern: "CURIOSITYSTREAM SILVER SPRINGMD",
   },
   {
-    category: Category.HEALTH,
+    category: Category.PERSONAL_CARE,
     vendor: "CVS",
     pattern: "CVS/PHARM",
   },
@@ -629,7 +629,7 @@ const recognizers: Recognizer[] = [
     pattern: "HOME* AHS.COM MEMPHIS TN",
   },
   {
-    category: Category.GROCERIES,
+    category: Category.LUXURY_FOOD,
     vendor: "The Honeybaked Ham Company",
     pattern: "HONEYBAKED HAM ",
   },
@@ -959,7 +959,7 @@ const recognizers: Recognizer[] = [
     pattern: "RUSSELL ORCHARDS ",
   },
   {
-    category: Category.GROCERIES,
+    category: Category.LUXURY_FOOD,
     vendor: "S&M Liquor",
     pattern: "S&M LIQUOR ",
   },
