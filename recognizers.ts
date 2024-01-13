@@ -57,7 +57,7 @@ const recognizers: Recognizer[] = [
     pattern: "AG TRAVEL PLAZA ",
   },
   {
-    category: Category.RENT,
+    category: Category.INSURANCE,
     vendor: "AGI",
     pattern: "AGI*RENTERS/CONDO INS 800-370-1990 FL",
   },
@@ -97,7 +97,7 @@ const recognizers: Recognizer[] = [
     pattern: "AMERICANAIR",
   },
   {
-    category: Category.HOBBIES,
+    category: Category.CHARITY,
     vendor: "American Bird Conservancy",
     pattern: "AMERICAN BIRD CONSERVAPO BOX 249 540-2535780 20115 VA USA",
   },
@@ -187,7 +187,7 @@ const recognizers: Recognizer[] = [
     pattern: /BACKBLAZE.COM .* PURCHASE HTTPSWWW.BACK CA/,
   },
   {
-    category: Category.HOBBIES,
+    category: Category.MEDIA,
     vendor: "Barnes & Noble",
     pattern: "BARNES & NOBLE ",
   },
@@ -779,7 +779,7 @@ const recognizers: Recognizer[] = [
     pattern: "MINGLEWOOD HARBORSIDE ",
   },
   {
-    category: Category.COMMUNICATIONS, // iPhone?
+    category: Category.ELECTRONICS, // iPhone?
     vendor: "Apple",
     pattern: /MONTHLY INSTALLMENTS \(\d+ OF 24\)/,
   },
@@ -1534,7 +1534,7 @@ const recognizers: Recognizer[] = [
   },
   {
     category: Category.HOBBIES,
-    vendor: "Cults 3D",
+    vendor: "Cults3D",
     pattern: "PAYPAL *CULTS3D",
   },
   {
