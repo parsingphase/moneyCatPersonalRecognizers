@@ -1402,6 +1402,16 @@ const recognizers: Recognizer[] = [
     pattern: "WAKEFIELD MUNICIPAL GAS ",
   },
   {
+    category: Category.TAX, // FIXME Or Utils?
+    vendor: "Wakefield ???",
+    pattern: "WAKEFIELD MUNICI DES:WAKEFIELD ",
+  },
+  {
+    category: Category.TAX,
+    vendor: "Town of Wakefield",
+    pattern: "WAKEFIELD DES: EXCISE ID:XXXXXXXXXX4904 INDN:Eva George CO ID:XXXXX00529 WEB",
+  },
+  {
     category: Category.GROCERIES,
     vendor: "Who Gives A Crap",
     pattern: "WHO GIVES A CRAP, INC.",
@@ -1652,6 +1662,268 @@ const recognizers: Recognizer[] = [
     vendor: "Kohls",
     pattern: "WWW.KOHLS.COM ",
   },
+  {
+    category: Category.ONLINE_SERVICES,
+    vendor: "1Password",
+    pattern: "1PASSWORD 4711 YONGE ST.10TH FLOOR TORONTO M2N6K8 ON CAN",
+  },
+  {
+    category: Category.LUXURY_FOOD,
+    vendor: "Best of British",
+    pattern: "BEST OF BRITISH LTD 22 STATE ST NEWBURYPORT 01950 MA USA",
+  },
+  {
+    category: Category.HOBBIES,
+    vendor: "Bird Watcher's Supply and Gift",
+    pattern: "BIRD WATCHER`S SUPP 194 ROUTE 1 NEWBURYPORT 01950 MA USA",
+  },
+  {
+    category: Category.DINING,
+    vendor: "Blue Moon Grill",
+    pattern: "BLUE MOON GRILL 955 MAIN ST WAKEFIELD 01880 MA USA",
+  },
+  {
+    category: Category.DINING,
+    vendor: "Burger King",
+    pattern: "BURGER KING",
+  },
+
+  {
+    category: Category.LUXURY_FOOD,
+    vendor: "Caporales Liquors",
+    pattern: "CAPORALES LIQUORS WAKEFIELD MAAPPLE PAY ENDING IN 8080",
+  },
+  {
+    category: Category.DINING,
+    vendor: "Cheesecake Factory",
+    pattern: "CHEESECAKE CHESTNUT HI199 BOYLSTON ST CHESTNUT HILL02467 MA USA",
+  },
+  {
+    category: Category.DINING,
+    vendor: "Chipotle",
+    pattern: "CHIPOTLE 3487 NEWBURYPORT MAAPPLE PAY ENDING IN 8080",
+  },
+  {
+    category: Category.TRAVEL,
+    vendor: "Cape May Ferry",
+    pattern: "CMAYLEWSFERRY I-NET",
+  },
+  {
+    category: Category.TRAVEL,
+    vendor: "DCR (Parking)",
+    pattern: "DCR-DAY USE CASHLESS P",
+  },
+  {
+    category: Category.DINING,
+    vendor: "Plazita Mexico Tacos",
+    pattern: "DD *PLAZITAMEXICOTACO",
+  },
+  {
+    category: Category.ENTERTAINMENT,
+    vendor: "Humble Bundle",
+    pattern: "HUMBLEBUNDLE.COM 163 FREELON ST SAN FRANCISCO94107 CA USA",
+  },
+  {
+    category: Category.HOBBIES,
+    vendor: "CraftCloud",
+    pattern: "ALL3DP / CRAFTCLOUD",
+  },
+  {
+    category: Category.ONLINE_SERVICES,
+    vendor: "Backblaze",
+    pattern: "BACKBLAZE INC 03/29 PURCHASE HTTPSWWW.BACK CA",
+  },
+  {
+    category: Category.MEDIA,
+    vendor: "Bookshop.org",
+    pattern: "BOOKSHOP.ORG",
+  },
+  {
+    category: Category.MEDIA,
+    vendor: "Boston Globe",
+    pattern: "BOSTON GLOBE MEDIA 6179292000 MA",
+  },
+  {
+    category: null,
+    vendor: null,
+    pattern: "CITY OF NEWBURYPORT 60 PLEASANT STREET NEWBURYPORT 01950 MA USA",
+  },
+  {
+    category: null,
+    vendor: null,
+    pattern: "CMSVEND*AMERICAN FOOD 450 WILDWOOD AVE WOBURN 01801 MA USA",
+  },
+  {
+    category: Category.DINING,
+    vendor: "Daves Hot Chicken",
+    pattern: "DAVES HOT CHICKEN 1089 WOBURN MAAPPLE PAY ENDING IN 8080",
+  },
+  {
+    category: Category.DINING,
+    vendor: "Hard Rock Cafe",
+    pattern: "HARD ROCK FOXWOOD R 350 TROLLEY LINE BOULEVA MASHANTUCKET 06388 CT USA",
+  },
+
+  {
+    category: Category.HOME_MAINTENANCE,
+    vendor: "AHS.com",
+    pattern: "HOME* AHS.COM ",
+  },
+  {
+    category: Category.TRAVEL,
+    vendor: "IHG",
+    pattern: "IHG POINTS AND CASH WE",
+  },
+  {
+    category: Category.HOME_HARDWARE,
+    vendor: "Kohl's",
+    pattern: "KOHL'S #",
+  },
+  {
+    category: null,
+    vendor: null,
+    pattern: "LANCER@MYSTICSEAPORTPO75 GREENMANVILLE AVE MYSTIC 06355 CT USA",
+  },
+  {
+    category: null,
+    vendor: null,
+    pattern: "LIBERAPAY 120222",
+  },
+  {
+    category: null,
+    vendor: null,
+    pattern: "LLBEAN-PEABODY RTL STO210 ANDOVER ST PEABODY 01960 MA USA",
+  },
+  {
+    category: Category.PERSONAL_CARE,
+    vendor: "L'Occitane",
+    pattern: "LOCCITANE BURLINGTON MAAPPLE PAY ENDING IN 8080",
+  },
+  {
+    category: Category.HOME_HARDWARE,
+    vendor: "Lowe's",
+    pattern: "LOWE'S OF DANVERS, MA. DANVERS ",
+  },
+  {
+    category: Category.HOME_HARDWARE,
+    vendor: "Lowe's",
+    pattern: "LOWE'S OF WOBURN, MA WOBURN ",
+  },
+  {
+    category: Category.GARDEN,
+    vendor: "Mahoneys",
+    pattern: "MAHONEYS ROCKY LEDGE WINCHESTER MAAPPLE PAY ENDING IN 8080",
+  },
+  {
+    category: Category.DINING,
+    vendor: "McDonalds",
+    pattern: "MCDONALDS 15765 WAKEFIELD MA",
+  },
+  {
+    category: Category.ONLINE_SERVICES,
+    vendor: "Microsoft",
+    pattern: "MICROSOFT*MICROSOFT 36 MSBILL.INFO WA",
+  },
+  {
+    category: Category.MISC,
+    vendor: "Miniso",
+    pattern: "MINISO BURLINGTON MALL BURLINGTON MAAPPLE PAY ENDING IN 8080",
+  },
+  {
+    category: Category.DINING,
+    vendor: "Mojo Sushi",
+    pattern: "MOJO SUSHI LLP WAKEFIELD MA",
+  },
+  {
+    category: Category.HOBBIES,
+    vendor: "My Bird Buddy",
+    pattern: "MYBIRDBUDDY.COM ",
+  },
+  {
+    category: Category.ENTERTAINMENT,
+    vendor: "Mystic Aquarium",
+    pattern: "MYSTIC AQUARIUM",
+  },
+  {
+    category: Category.ENTERTAINMENT,
+    vendor: "Mystic Seaport Museum",
+    pattern: "MYSTIC SEAPORT MUSEUM",
+  },
+  {
+    category: Category.LUXURY_FOOD,
+    vendor: "Nasty Nonni'",
+    pattern: "NASTY NONNI'S WINE & S325 MAIN STREET SAUGUS 01906 MA USA",
+  },
+  {
+    category: Category.DINING,
+    vendor: "North Avenue Diner",
+    pattern: "NORTH AVE DINER 247 NORTH AVE WAKEFIELD 01880 MA USA",
+  },
+  {
+    category: Category.MISC,
+    vendor: null,
+    pattern: "PENGUINS OTTERS AND OT27 COOGAN BLVD STE 4 MYSTIC 06355-1920CT USA",
+  },
+  {
+    category: Category.DINING,
+    vendor: "Plum Island Coffee",
+    pattern: "PLUM ISLAND COFFEE 14 MARKET SQUARE NEWBURYPORT 01950 MA USA",
+  },
+  {
+    "category": Category.TAX,
+    "vendor": 'Grey Finance',
+    "pattern": "PAYPAL *rl "
+  },
+  {
+    "category": Category.HOBBIES,
+    "vendor": 'ABA',
+    "pattern": "PY *AMERICAN BIRDING A93 CLINTON STREET DELAWARE CITY19706 DE USA"
+  },
+  {
+    "category": Category.GARDEN,
+    "vendor": 'Garden For Wildlife',
+    "pattern": "SP GARDEN FOR WILDLI RESTON VA"
+  },
+  {
+    "category": Category.CLOTHING,
+    "vendor": "North Swell",
+    "pattern": "SP NORTH SWELL 4 COLONIAL DRIVE WATERFORD 06385 CT USA"
+  },
+  {
+    "category": Category.ENTERTAINMENT,
+    "vendor": 'US Parks Pass',
+    "pattern": "SP US PARK PASS BRIDGEPORT CT"
+  },
+  {
+    "category": Category.TRAVEL,
+    "vendor": 'Spot Hero',
+    "pattern": "SPOTHERO 844-356-8054 8443568054 IL"
+  },
+  {
+    "category": Category.DINING,
+    "vendor": "Sticky Situations",
+    "pattern": "STICKY SITUATIONS MYSTIC CT"
+  },
+  {
+    "category": Category.TRAVEL,
+    "vendor": 'Queen Victoria B&B',
+    "pattern": "THE QUEEN VICTORIA B&B102 OCEAN ST CAPE MAY 08204 NJ USA"
+  },
+  {
+    "category": Category.MISC, // Eva 3D model
+    "vendor": 'Walmart',
+    "pattern": "WALMART.COM 702 SW 8TH STREET MS100 WALMART.COM 72716 AR USA"
+  },
+  {
+    "category": Category.ENTERTAINMENT,
+    vendor: "Zoo New England",
+    "pattern": "ZOO NEW ENGLAND 1 FRANKLIN PARK ROAD BOSTON 02121 MA USA"
+  },
+  {
+    "category": Category.MEDIA,
+    "vendor": 'Zoop',
+    "pattern": "ZOOP.GG* RAB292AQX2 221 N. BROAD ST. SUITE 3A MIDDLETOWN 19709 DE USA"
+  }
 ];
 
 export default recognizers;
