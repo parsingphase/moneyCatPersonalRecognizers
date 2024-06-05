@@ -1,6 +1,8 @@
-import { Category, Recognizer } from "../../types";
+import { Category, Recognizer } from "../../lib/types";
 
 const recognizers: Recognizer[] = [
+  // Parking, Fuel = Car
+
   {
     category: Category.SALARY,
     vendor: "Embark",
@@ -719,7 +721,7 @@ const recognizers: Recognizer[] = [
     pattern: "MAKERBOX",
   },
   {
-    category: Category.ENTERTAINMENT,
+    category: Category.GARDEN,
     vendor: "Native Plant Trust",
     pattern: "LS NATIVE PLANT TRUST ",
   },
@@ -1162,7 +1164,7 @@ const recognizers: Recognizer[] = [
   },
   {
     category: Category.DINING,
-    vendor: "Omlette HQ",
+    vendor: "Omelette HQ",
     pattern: /SQ .*W S TWINS INC 13-31 LINCOLN STREET WAKEFIELD 01880 MA USA/,
   },
   {
@@ -1709,7 +1711,7 @@ const recognizers: Recognizer[] = [
     pattern: "CMAYLEWSFERRY I-NET",
   },
   {
-    category: Category.TRAVEL,
+    category: Category.CAR,
     vendor: "DCR (Parking)",
     pattern: "DCR-DAY USE CASHLESS P",
   },
@@ -1731,7 +1733,7 @@ const recognizers: Recognizer[] = [
   {
     category: Category.ONLINE_SERVICES,
     vendor: "Backblaze",
-    pattern: "BACKBLAZE INC 03/29 PURCHASE HTTPSWWW.BACK CA",
+    pattern: "BACKBLAZE INC ",
   },
   {
     category: Category.MEDIA,
@@ -1895,7 +1897,7 @@ const recognizers: Recognizer[] = [
     "pattern": "SP US PARK PASS BRIDGEPORT CT"
   },
   {
-    "category": Category.TRAVEL,
+    "category": Category.CAR,
     "vendor": 'Spot Hero',
     "pattern": "SPOTHERO 844-356-8054 8443568054 IL"
   },
@@ -1923,7 +1925,244 @@ const recognizers: Recognizer[] = [
     "category": Category.MEDIA,
     "vendor": 'Zoop',
     "pattern": "ZOOP.GG* RAB292AQX2 221 N. BROAD ST. SUITE 3A MIDDLETOWN 19709 DE USA"
+  },
+
+  {
+    "category": null, // Vending machine
+    "vendor": '365 Market Vending',
+    "pattern": "365 MARKET K 888 432-31743 MAPLELAWN DR TROY 48084 MI USA"
+  },
+  {
+    "category": Category.GIFTS,
+    "vendor": 'Across The Way Gifts',
+    "pattern": "ACROSS THE WAY 313 WASHINGTON ST CAPE MAY 08204 NJ USA"
+  },
+  {
+    "category": Category.DINING,
+    "vendor": 'Cape May Zoo',
+    "pattern": "AMK CAPE MAY ZOO FOOD 4 MOORE RD CAPE MAY CH 08210-1654NJ USA"
+  },
+  {
+    "category": Category.DINING,
+    "vendor": 'Anthonys Pizza',
+    "pattern": /ANTHONYS #\d+.*MA USA/
+  },
+  {
+    "category": Category.DINING,
+    "vendor": 'Avalon Brew Pub',
+    "pattern": "AVALON BREW PUB 05/13 PURCHASE AVALON NJ"
+  },
+  {
+    "category": Category.CAR,
+    "vendor": null,
+    "pattern": "BJ'S FUEL #9030 6 HUTCHINSON DR DANVERS 01923 MA USA"
+  },
+  {
+    "category": Category.GROCERIES,
+    "vendor": "BJs'",
+    "pattern": "BJS MEMBERSHIP 0996 25 RESEARCH DR 800-2572582 01581 MA USA"
+  },
+  {
+    "category":Category.GROCERIES,
+    "vendor": "BJ's",
+    "pattern": "BJS WHOLESALE #0030 6 HUTCHINSON DR DANVERS 01923 MA USA"
+  },
+  {
+    "category": Category.DINING,
+    "vendor": null,
+    "pattern": "BRAMBLE AND BRINE 102 2ND STREET REHOBOTH BEAC19971 DE USA"
+  },
+  {
+    "category": Category.GIFTS,
+    "vendor": null,
+    "pattern": "CANDY KITCHEN - REHOBO102 REHOBOTH AVENUE REHOBOTH BEAC19971 DE USA"
+  },
+  {
+    "category": Category.CAR,
+    "vendor": null,
+    "pattern": "CHARGEPOINT, INC 254 EAST HACIENDA AVE CAMPBELL 95008 CA USA"
+  },
+  {
+    "category": Category.DINING,
+    "vendor": null,
+    "pattern": "CHESTNUT MARKET 536 MAIN STREET NEW PALTZ 12561 NY USA"
+  },
+  {
+    "category": Category.LUXURY_FOOD,
+    "vendor": null,
+    "pattern": "COLBY FARM 50 SCOTLAND RD NEWBURY 01951 MA USA"
+  },
+  {
+    "category": Category.GROCERIES,
+    "vendor": null,
+    "pattern": "D'AGOSTINO'S FOODS 1297 MASSACHUSETTS AVENU ARLINGTON 02476 MA USA"
+  },
+  {
+    "category": Category.DINING,
+    "vendor": null,
+    "pattern": "DAVES HOT CHICKEN 1089296 MISHAWUM RD STE #400 WOBURN 01801 MA USA"
+  },
+  {
+    "category": Category.DINING,
+    "vendor": null,
+    "pattern": "DOGFISH HEAD BREWINGS 320 REHOBOTH AVE REHOBOTH BEAC19971 DE USA"
+  },
+  {
+    "category": Category.DINING,
+    "vendor": null,
+    "pattern": "DOGFISH HEAD CRAFT BRE6 CANNERY VLG MILTON 19968 DE USA"
+  },
+  {
+    "category": Category.TRAVEL,
+    "vendor": null,
+    "pattern": "DOGFISHINN 105 SAVANNAH ROAD LEWES 19958 DE USA"
+  },
+  {
+    "category": Category.ENTERTAINMENT,
+    "vendor": null,
+    "pattern": "EASTERN STATES EXPO ON"
+  },
+  {
+    "category": Category.DINING,
+    "vendor": null,
+    "pattern": "FINS BAR & GRILLE 142 DECATUR ST CAPE MAY 08204 NJ USA"
+  },
+  {
+    "category": null,
+    "vendor": null,
+    "pattern": "FIVE BELOW 8050 STONEHAM MAAPPLE PAY ENDING IN 8080"
+  },
+  {
+    "category": Category.DINING,
+    "vendor": null,
+    "pattern": "HOT DOG TOMMY S 319 BEACH AVENUE CAPE MAY 08204 NJ USA"
+  },
+  {
+    "category": Category.DINING,
+    "vendor": null,
+    "pattern": "ICCARA ITALIAN BISTRO 315 OCEAN ST UNIT 4 CAPE MAY 08204 NJ USA"
+  },
+  {
+    "category": Category.DINING,
+    "vendor": null,
+    "pattern": "IRISH EYES LEWES 213 ANGLERS RD LEWES 19958 DE USA"
+  },
+  {
+    "category": Category.CLOTHING,
+    "vendor": null,
+    "pattern": "LEVI'S STORE 604 LYNNFIELD MAAPPLE PAY ENDING IN 8080"
+  },
+  {
+    "category": Category.TRAVEL,
+    "vendor": null,
+    "pattern": "MBTA OAK GROVE 265 WASHINGTON ST MALDEN 02148 MA USA"
+  },
+  {
+    "category": Category.CAR,
+    "vendor": null,
+    "pattern": "PARKMOBILE "
+  },
+  {
+    "category": Category.HOBBIES,
+    "vendor": null,
+    "pattern": "PUZZLES AND LEWES GOUR108 FRONT STREET LEWES 19958 DE USA"
+  },
+  {
+    "category": null,
+    "vendor": null,
+    "pattern": "PY *CMBO NORTHWOOD CEN9 HARDSCRABBLE RD BERNARDSVILLE07924 NJ USA"
+  },
+  {
+    "category": Category.DINING,
+    "vendor": null,
+    "pattern": "PY *HEIRLOOM DELAWARE 212 SAVANNAH RD LEWES 19958 DE USA"
+  },
+  {
+    "category": Category.BANK_FEES,
+    "vendor": null,
+    "pattern": "Preferred Rewards-Book Credit Fee Waiver of $15"
+  },
+  {
+    "category": Category.GARDEN,
+    "vendor": null,
+    "pattern": "RF *NATIVE PLANT TRU 321 COMMONWEALTH RD WAYLAND 01778 MA USA"
+  },
+  {
+    "category": Category.DINING,
+    "vendor": null,
+    "pattern": "SERVOMATION REFRESHME "
+  },
+  {
+    "category": Category.BANK_FEES,
+    "vendor": null,
+    "pattern": "TAX PMNT CONVEN FEE 49 CHURCH STREET WHITINSVILLE 01588 MA USA"
+  },
+  {
+    "category": null,
+    "vendor": null,
+    "pattern": "THE PAPER STORE 0040 LYNNFIELD MAAPPLE PAY ENDING IN 8080"
+  },
+  {
+    "category": Category.DINING,
+    "vendor": null,
+    "pattern": "THEMADBATTERREST 19 JACKSON ST 00001 08204 NJ USA"
+  },
+  {
+    "category": Category.BANK_FEES,
+    "vendor": null,
+    "pattern": "Tax Pmnt Conven Fee"
+  },
+  {
+    "category": null,
+    "vendor": null,
+    "pattern": "USCONNECT LTD VEND N NORTH CHELMSFMAAPPLE PAY ENDING IN 8080"
+  },
+  {
+    "category": null,
+    "vendor": null,
+    "pattern": "WAKEFIELD TOWN OF 49 CHURCH STREET WHITINSVILLE 01588 MA USA"
+  },
+  {
+    "category": Category.CAR,
+    "vendor": null,
+    "pattern": "WEATHERTECH 8004416287 IL"
+  },
+  {
+    "category": Category.GROCERIES,
+    "vendor": null,
+    "pattern": "WEIS MARKETS 271 17232 N VILLAGE MAIN B LEWES 19958 DE USA"
+  },
+  {
+    "category": Category.DINING,
+    "vendor": null,
+    "pattern": "WENDY'S #1675 25 STOREY AVE NEWBURYPORT 01950 MA USA"
+  },
+  {
+    "category": Category.GROCERIES,
+    "vendor": null,
+    "pattern": "WHOLE FOODS LNF 10452 866-216-1072 DE2YPODNYWJS2"
+  },
+  {
+    "category": Category.HOME_HARDWARE,
+    "vendor": null,
+    "pattern": "WILLIAMS SONOMA 6029 LYNNFIELD MAAPPLE PAY ENDING IN 808001206R"
+  },
+  {
+    "category": Category.REPAYMENT_IN,
+    "vendor": null,
+    "pattern": /WIRE TYPE:BOOK IN .* ORIG:MOLLIE J BRYANT/
+  },
+  {
+    "category": Category.HOME_HARDWARE,
+    "vendor": null,
+    "pattern": "WP WHIRLPOOL PARTS" // freezer keys
+  },
+  {
+    "category": null,
+    "vendor": null,
+    "pattern": "Wakefield Town of"
   }
+
 ];
 
 export default recognizers;
