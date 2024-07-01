@@ -454,7 +454,7 @@ const recognizers: Recognizer[] = [
   {
     category: Category.DINING,
     vendor: "365 Market Vending",
-    pattern: "365 MARKET K ",
+    pattern: "365 MARKET ",
   },
   {
     category: Category.DINING,
@@ -833,14 +833,26 @@ const recognizers: Recognizer[] = [
   },
   {
     category: Category.GIFTS,
-    vendor: null,
+    vendor: "Candy Kitchen",
     pattern: "CANDY KITCHEN - REHOBO102 REHOBOTH AVENUE REHOBOTH BEAC19971 DE USA",
+  },
+  {
+    category: Category.GIFTS,
+    vendor: "Friends of Prime Hook",
+    pattern: "SQ *FRIENDS STORE AT P",
   },
   {
     category: Category.GROCERIES,
     vendor: "BJ's",
     pattern: "BJS WHOLESALE ",
   },
+
+  {
+    category: Category.BIG_BOX_STORES, // garden furniture etc
+    vendor: "BJ's",
+    pattern: "BJS.COM ",
+  },
+
   {
     category: Category.GROCERIES,
     vendor: "BJs'",
@@ -1068,6 +1080,11 @@ const recognizers: Recognizer[] = [
   },
   {
     category: Category.LUXURY_FOOD,
+    vendor: "Cape May Peanut Butter Company",
+    pattern: /CAPE MAY PEANUT BU/,
+  },
+  {
+    category: Category.LUXURY_FOOD,
     vendor: "Caporales Liquors",
     pattern: "CAPORALES LIQUORS WAKEFIELD MAAPPLE PAY ENDING IN 8080",
   },
@@ -1142,9 +1159,14 @@ const recognizers: Recognizer[] = [
     pattern: "ZOOP.GG* RAB292AQX2 221 N. BROAD ST. SUITE 3A MIDDLETOWN 19709 DE USA",
   },
   {
-    category: Category.MISC,
+    category: Category.GIFTS,
     vendor: "Bellzi",
     pattern: "SP BELLZI.COM CHINO CA",
+  },
+  {
+    category: Category.MISC,
+    vendor: "Dogfish Head Inn",
+    pattern: "SQ *DFH INN 105 SAVANNAH RD ",
   },
   {
     category: Category.MISC,
@@ -1315,6 +1337,124 @@ const recognizers: Recognizer[] = [
     category: Category.UTILITIES,
     vendor: "WMGLD",
     pattern: "Town of Wakefiel DES: WATER ",
+  },
+
+  {
+    category: Category.DINING,
+    vendor: null,
+    pattern: "VANS VIETNAMESE RESTAU307 CENTRAL AVE ALBANY 12206 NY USA",
+  },
+  {
+    category: Category.DINING,
+    vendor: null,
+    pattern: "WOLFFS BIERGARTEN ALBA895 BROADWAY ALBANY 12207 NY USA",
+  },
+  {
+    category: Category.DINING,
+    vendor: null,
+    pattern: "SHOGUN ON MADISON 457 MADISON AVENUE ALBANY 12210 NY USA",
+  },
+  {
+    category: Category.DINING,
+    vendor: null,
+    pattern: "PBD KITCHEN QPS1 EMPIRE ST PLAZA ALBANY 12242 NY USA",
+  },
+  {
+    category: Category.DINING,
+    vendor: null,
+    pattern: "PY *THE CITY BEER HALL42 HOWARD ST ALBANY 12207 NY USA",
+  },
+  {
+    category: Category.DINING,
+    vendor: null,
+    pattern: "HOLLOW BAR AND KITCHEN79 N PEARL ST ALBANY 12207 NY USA",
+  },
+  {
+    category: Category.DINING,
+    vendor: null,
+    pattern: "KIMBALL FARM ICE CREAM",
+  },
+  {
+    category: Category.DINING,
+    vendor: null,
+    pattern: "KIMBALL FARM GRILL",
+  },
+  {
+    category: Category.DINING,
+    vendor: null,
+    pattern: "CHEESYSTREETGRILL",
+  },
+  {
+    category: Category.DINING,
+    vendor: "Plazita",
+    pattern: "DD PLAZITAMEXICOTACO 855-973-1040 CA",
+  },
+  {
+    category: Category.DINING,
+    vendor: null, // probably ice-cream
+    pattern: "JORDANS IMAX READING READING ",
+  },
+  {
+    category: Category.DINING,
+    vendor: null, // travel snacks or fuel?
+    pattern: "MM 8.5 EASTBOUND MA TP857 MM 8.5 EAST W BECKET 01238 MA USA",
+  },
+  {
+    category: Category.DINING,
+    vendor: "WeWork Market",
+    pattern: "MARKET@WORK ",
+  },
+
+  {
+    category: Category.ENTERTAINMENT,
+    vendor: null,
+    pattern: "THE EGG 5184731061 NY",
+  },
+
+  {
+    category: Category.ENTERTAINMENT,
+    vendor: null,
+    pattern: "KIMBALL FARM MINI GOLF400 LITTLETON ROAD WESTFORD 01886 MA USA",
+  },
+  {
+    category: Category.ENTERTAINMENT,
+    vendor: "Schodack Island State Park NY",
+    pattern: "SCHODACK ISLAND SP PKH1 SCHODACK ISLAND WAY SCHODACK LAND12156 NY USA",
+  },
+
+  {
+    category: Category.HOME_MAINTENANCE,
+    vendor: "Klostermann Electrical",
+    pattern: "KLOSTERMANN ELECTRI...225 STEDMAN STREET SUITE 11 LOWELL 01851 MA USA",
+  },
+
+  {
+    category: Category.CLOTHING,
+    vendor: null,
+    pattern: "NEW ENGLAND RUNNING CO43 ENON ST BEVERLY 01915 MA USA",
+  },
+
+  {
+    category: Category.GARDEN,
+    vendor: "Blue Stem Natives",
+    pattern: "BLUE STEM NATIVES, LLC500 TERRY A. FRANCOIS BOULEVARD SAN FRANCISCO94158 CA USA",
+  },
+
+  {
+    category: Category.HOBBIES,
+    vendor: "Gallium Digital", // ModernCSV
+    pattern: "GALLIUM DIGITAL",
+  },
+  {
+    category: Category.HOBBIES,
+    vendor: "JCS Wildlife",
+    pattern: "SP JCS WILDLIFE 8128672800 IN",
+  },
+
+  {
+    category: Category.CAR,
+    vendor: "Park Albany / Passport Parking",
+    pattern: "APA-PASSPORT (AUTH.NET25 ORANGE ST ALBANY 12207 NY USA",
   },
 ];
 
