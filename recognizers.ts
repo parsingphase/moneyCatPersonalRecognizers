@@ -11,6 +11,11 @@ const recognizers: Recognizer[] = [
     pattern: "Bank of America DES:CASHREWARD ",
   },
   {
+    category: Category.BIG_BOX_STORES,
+    vendor: "BJ's",
+    pattern: "BJS.COM ",
+  },
+  {
     category: Category.CAR,
     vendor: "Bonnell Ford",
     pattern: "BONNELL FORD 353 CAMBRIDGE ST WINCHESTER 01890 MA USA",
@@ -388,8 +393,18 @@ const recognizers: Recognizer[] = [
   },
   {
     category: Category.CAR,
+    vendor: "MBTA Parking",
+    pattern: "MBTA PAY BY PHONE BOSTON MA",
+  },
+  {
+    category: Category.CAR,
     vendor: "Massport Logan Parking",
     pattern: "LOGAN PKG ",
+  },
+  {
+    category: Category.CAR,
+    vendor: "Park Albany / Passport Parking",
+    pattern: "APA-PASSPORT (AUTH.NET25 ORANGE ST ALBANY 12207 NY USA",
   },
   {
     category: Category.CAR,
@@ -445,6 +460,11 @@ const recognizers: Recognizer[] = [
     category: Category.CLOTHING,
     vendor: "REI",
     pattern: "REI #26 READING",
+  },
+  {
+    category: Category.CLOTHING,
+    vendor: null,
+    pattern: "NEW ENGLAND RUNNING CO43 ENON ST BEVERLY 01915 MA USA",
   },
   {
     category: Category.CREDIT_CARD_PAYMENT,
@@ -593,6 +613,11 @@ const recognizers: Recognizer[] = [
   },
   {
     category: Category.DINING,
+    vendor: "Plazita",
+    pattern: "DD PLAZITAMEXICOTACO 855-973-1040 CA",
+  },
+  {
+    category: Category.DINING,
     vendor: "Plazita Mexico Tacos",
     pattern: "DD *PLAZITAMEXICOTACO",
   },
@@ -663,6 +688,11 @@ const recognizers: Recognizer[] = [
   },
   {
     category: Category.DINING,
+    vendor: "WeWork Market",
+    pattern: "MARKET@WORK ",
+  },
+  {
+    category: Category.DINING,
     vendor: null,
     pattern: "BRAMBLE AND BRINE 102 2ND STREET REHOBOTH BEAC19971 DE USA",
   },
@@ -717,6 +747,61 @@ const recognizers: Recognizer[] = [
     pattern: "THEMADBATTERREST 19 JACKSON ST 00001 08204 NJ USA",
   },
   {
+    category: Category.DINING,
+    vendor: null,
+    pattern: "VANS VIETNAMESE RESTAU307 CENTRAL AVE ALBANY 12206 NY USA",
+  },
+  {
+    category: Category.DINING,
+    vendor: null,
+    pattern: "WOLFFS BIERGARTEN ALBA895 BROADWAY ALBANY 12207 NY USA",
+  },
+  {
+    category: Category.DINING,
+    vendor: null,
+    pattern: "SHOGUN ON MADISON 457 MADISON AVENUE ALBANY 12210 NY USA",
+  },
+  {
+    category: Category.DINING,
+    vendor: null,
+    pattern: "PBD KITCHEN QPS1 EMPIRE ST PLAZA ALBANY 12242 NY USA",
+  },
+  {
+    category: Category.DINING,
+    vendor: null,
+    pattern: "PY *THE CITY BEER HALL42 HOWARD ST ALBANY 12207 NY USA",
+  },
+  {
+    category: Category.DINING,
+    vendor: null,
+    pattern: "HOLLOW BAR AND KITCHEN79 N PEARL ST ALBANY 12207 NY USA",
+  },
+  {
+    category: Category.DINING,
+    vendor: null,
+    pattern: "KIMBALL FARM ICE CREAM",
+  },
+  {
+    category: Category.DINING,
+    vendor: null,
+    pattern: "KIMBALL FARM GRILL",
+  },
+  {
+    category: Category.DINING,
+    vendor: null,
+    pattern: "CHEESYSTREETGRILL",
+  },
+  {
+    category: Category.DINING,
+    vendor: null,
+    pattern: "JORDANS IMAX READING READING ",
+  },
+  {
+    category: Category.DINING,
+    vendor: null,
+    pattern: "MM 8.5 EASTBOUND MA TP857 MM 8.5 EAST W BECKET 01238 MA USA",
+  },
+  {
     category: Category.ELECTRONICS,
     vendor: "Apple",
     pattern: /MONTHLY INSTALLMENTS \(\d+ OF 24\)/,
@@ -763,6 +848,11 @@ const recognizers: Recognizer[] = [
   },
   {
     category: Category.ENTERTAINMENT,
+    vendor: "Schodack Island State Park NY",
+    pattern: "SCHODACK ISLAND SP PKH1 SCHODACK ISLAND WAY SCHODACK LAND12156 NY USA",
+  },
+  {
+    category: Category.ENTERTAINMENT,
     vendor: "The Chocolate Expo",
     pattern: "EB THE CHOCOLATE EXPO 535 MISSION STREET 8014137200 94105 CA USA",
   },
@@ -790,6 +880,21 @@ const recognizers: Recognizer[] = [
     category: Category.ENTERTAINMENT,
     vendor: null,
     pattern: "EASTERN STATES EXPO ON",
+  },
+  {
+    category: Category.ENTERTAINMENT,
+    vendor: null,
+    pattern: "THE EGG 5184731061 NY",
+  },
+  {
+    category: Category.ENTERTAINMENT,
+    vendor: null,
+    pattern: "KIMBALL FARM MINI GOLF400 LITTLETON ROAD WESTFORD 01886 MA USA",
+  },
+  {
+    category: Category.GARDEN,
+    vendor: "Blue Stem Natives",
+    pattern: "BLUE STEM NATIVES, LLC500 TERRY A. FRANCOIS BOULEVARD SAN FRANCISCO94158 CA USA",
   },
   {
     category: Category.GARDEN,
@@ -828,8 +933,8 @@ const recognizers: Recognizer[] = [
   },
   {
     category: Category.GIFTS,
-    vendor: "The Paper Store",
-    pattern: "THE PAPER STORE 0040 LYNNFIELD MAAPPLE PAY ENDING IN 8080",
+    vendor: "Bellzi",
+    pattern: "SP BELLZI.COM CHINO CA",
   },
   {
     category: Category.GIFTS,
@@ -842,17 +947,15 @@ const recognizers: Recognizer[] = [
     pattern: "SQ *FRIENDS STORE AT P",
   },
   {
+    category: Category.GIFTS,
+    vendor: "The Paper Store",
+    pattern: "THE PAPER STORE 0040 LYNNFIELD MAAPPLE PAY ENDING IN 8080",
+  },
+  {
     category: Category.GROCERIES,
     vendor: "BJ's",
     pattern: "BJS WHOLESALE ",
   },
-
-  {
-    category: Category.BIG_BOX_STORES, // garden furniture etc
-    vendor: "BJ's",
-    pattern: "BJS.COM ",
-  },
-
   {
     category: Category.GROCERIES,
     vendor: "BJs'",
@@ -945,8 +1048,18 @@ const recognizers: Recognizer[] = [
   },
   {
     category: Category.HOBBIES,
+    vendor: "Gallium Digital",
+    pattern: "GALLIUM DIGITAL",
+  },
+  {
+    category: Category.HOBBIES,
     vendor: "Haikubox",
     pattern: "HAIKUBOX ",
+  },
+  {
+    category: Category.HOBBIES,
+    vendor: "JCS Wildlife",
+    pattern: "SP JCS WILDLIFE 8128672800 IN",
   },
   {
     category: Category.HOBBIES,
@@ -1069,6 +1182,11 @@ const recognizers: Recognizer[] = [
     pattern: "WP WHIRLPOOL PARTS",
   },
   {
+    category: Category.HOME_MAINTENANCE,
+    vendor: "Klostermann Electrical",
+    pattern: "KLOSTERMANN ELECTRI...225 STEDMAN STREET SUITE 11 LOWELL 01851 MA USA",
+  },
+  {
     category: Category.LUXURY_FOOD,
     vendor: "Beacon Hill Wine & Gourmet",
     pattern: "BEACON HILL WINE ",
@@ -1159,11 +1277,6 @@ const recognizers: Recognizer[] = [
     pattern: "ZOOP.GG* RAB292AQX2 221 N. BROAD ST. SUITE 3A MIDDLETOWN 19709 DE USA",
   },
   {
-    category: Category.GIFTS,
-    vendor: "Bellzi",
-    pattern: "SP BELLZI.COM CHINO CA",
-  },
-  {
     category: Category.MISC,
     vendor: "Dogfish Head Inn",
     pattern: "SQ *DFH INN 105 SAVANNAH RD ",
@@ -1251,7 +1364,7 @@ const recognizers: Recognizer[] = [
   {
     category: Category.REPAYMENT_IN,
     vendor: null,
-    pattern: 'Zelle payment from MOLLIE BRYANT',
+    pattern: "Zelle payment from MOLLIE BRYANT",
   },
   {
     category: Category.TAX,
@@ -1342,129 +1455,6 @@ const recognizers: Recognizer[] = [
     category: Category.UTILITIES,
     vendor: "WMGLD",
     pattern: "Town of Wakefiel DES: WATER ",
-  },
-
-  {
-    category: Category.DINING,
-    vendor: null,
-    pattern: "VANS VIETNAMESE RESTAU307 CENTRAL AVE ALBANY 12206 NY USA",
-  },
-  {
-    category: Category.DINING,
-    vendor: null,
-    pattern: "WOLFFS BIERGARTEN ALBA895 BROADWAY ALBANY 12207 NY USA",
-  },
-  {
-    category: Category.DINING,
-    vendor: null,
-    pattern: "SHOGUN ON MADISON 457 MADISON AVENUE ALBANY 12210 NY USA",
-  },
-  {
-    category: Category.DINING,
-    vendor: null,
-    pattern: "PBD KITCHEN QPS1 EMPIRE ST PLAZA ALBANY 12242 NY USA",
-  },
-  {
-    category: Category.DINING,
-    vendor: null,
-    pattern: "PY *THE CITY BEER HALL42 HOWARD ST ALBANY 12207 NY USA",
-  },
-  {
-    category: Category.DINING,
-    vendor: null,
-    pattern: "HOLLOW BAR AND KITCHEN79 N PEARL ST ALBANY 12207 NY USA",
-  },
-  {
-    category: Category.DINING,
-    vendor: null,
-    pattern: "KIMBALL FARM ICE CREAM",
-  },
-  {
-    category: Category.DINING,
-    vendor: null,
-    pattern: "KIMBALL FARM GRILL",
-  },
-  {
-    category: Category.DINING,
-    vendor: null,
-    pattern: "CHEESYSTREETGRILL",
-  },
-  {
-    category: Category.DINING,
-    vendor: "Plazita",
-    pattern: "DD PLAZITAMEXICOTACO 855-973-1040 CA",
-  },
-  {
-    category: Category.DINING,
-    vendor: null, // probably ice-cream
-    pattern: "JORDANS IMAX READING READING ",
-  },
-  {
-    category: Category.DINING,
-    vendor: null, // travel snacks or fuel?
-    pattern: "MM 8.5 EASTBOUND MA TP857 MM 8.5 EAST W BECKET 01238 MA USA",
-  },
-  {
-    category: Category.DINING,
-    vendor: "WeWork Market",
-    pattern: "MARKET@WORK ",
-  },
-
-  {
-    category: Category.ENTERTAINMENT,
-    vendor: null,
-    pattern: "THE EGG 5184731061 NY",
-  },
-
-  {
-    category: Category.ENTERTAINMENT,
-    vendor: null,
-    pattern: "KIMBALL FARM MINI GOLF400 LITTLETON ROAD WESTFORD 01886 MA USA",
-  },
-  {
-    category: Category.ENTERTAINMENT,
-    vendor: "Schodack Island State Park NY",
-    pattern: "SCHODACK ISLAND SP PKH1 SCHODACK ISLAND WAY SCHODACK LAND12156 NY USA",
-  },
-
-  {
-    category: Category.HOME_MAINTENANCE,
-    vendor: "Klostermann Electrical",
-    pattern: "KLOSTERMANN ELECTRI...225 STEDMAN STREET SUITE 11 LOWELL 01851 MA USA",
-  },
-
-  {
-    category: Category.CLOTHING,
-    vendor: null,
-    pattern: "NEW ENGLAND RUNNING CO43 ENON ST BEVERLY 01915 MA USA",
-  },
-
-  {
-    category: Category.GARDEN,
-    vendor: "Blue Stem Natives",
-    pattern: "BLUE STEM NATIVES, LLC500 TERRY A. FRANCOIS BOULEVARD SAN FRANCISCO94158 CA USA",
-  },
-
-  {
-    category: Category.HOBBIES,
-    vendor: "Gallium Digital", // ModernCSV
-    pattern: "GALLIUM DIGITAL",
-  },
-  {
-    category: Category.HOBBIES,
-    vendor: "JCS Wildlife",
-    pattern: "SP JCS WILDLIFE 8128672800 IN",
-  },
-
-  {
-    category: Category.CAR,
-    vendor: "Park Albany / Passport Parking",
-    pattern: "APA-PASSPORT (AUTH.NET25 ORANGE ST ALBANY 12207 NY USA",
-  },
-  {
-    category: Category.CAR,
-    vendor: "MBTA Parking",
-    pattern: "MBTA PAY BY PHONE BOSTON MA",
   },
 ];
 
