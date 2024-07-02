@@ -1249,6 +1249,11 @@ const recognizers: Recognizer[] = [
     pattern: /WIRE TYPE:BOOK IN .* ORIG:MOLLIE J BRYANT/,
   },
   {
+    category: Category.REPAYMENT_IN,
+    vendor: null,
+    pattern: 'Zelle payment from MOLLIE BRYANT',
+  },
+  {
     category: Category.TAX,
     vendor: "Grey Finance",
     pattern: "PAYPAL *rl ",
@@ -1270,7 +1275,7 @@ const recognizers: Recognizer[] = [
   },
   {
     category: Category.TAX,
-    vendor: null,
+    vendor: "Town of Wakefield",
     pattern: "WAKEFIELD TOWN OF 49 CHURCH STREET WHITINSVILLE 01588 MA USA",
   },
   {
@@ -1455,6 +1460,11 @@ const recognizers: Recognizer[] = [
     category: Category.CAR,
     vendor: "Park Albany / Passport Parking",
     pattern: "APA-PASSPORT (AUTH.NET25 ORANGE ST ALBANY 12207 NY USA",
+  },
+  {
+    category: Category.CAR,
+    vendor: "MBTA Parking",
+    pattern: "MBTA PAY BY PHONE BOSTON MA",
   },
 ];
 
