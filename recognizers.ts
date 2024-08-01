@@ -22,6 +22,11 @@ const recognizers: Recognizer[] = [
   },
   {
     category: Category.CAR,
+    vendor: "Franks Auto Inspection",
+    pattern: "FRANKS AUTO INSPECTION45 RICHARDSON AVE WAKEFIELD 01880 MA USA",
+  },
+  {
+    category: Category.CAR,
     vendor: "One Kendall Parking",
     pattern: "ONE KENDALL PARKING 389 BINNEY ST CAMBRIDGE 02139 MA USA",
   },
@@ -447,6 +452,11 @@ const recognizers: Recognizer[] = [
     pattern: "GBFB.ORG",
   },
   {
+    category: Category.CHARITY,
+    vendor: "MOVEON.ORG",
+    pattern: "MOVEON.ORG POLITICAL A",
+  },
+  {
     category: Category.CLOTHING,
     vendor: "Bird Collective",
     pattern: "SP BIRD COLLECTIVE BROOKLYN NY",
@@ -498,6 +508,11 @@ const recognizers: Recognizer[] = [
   },
   {
     category: Category.DINING,
+    vendor: "Caffe Nero",
+    pattern: "1040 CAFFE NEERO WOBUR290 MISHAWUM RD STE WOBURN 01801-2289MA USA",
+  },
+  {
+    category: Category.DINING,
     vendor: "Cake Ann",
     pattern: /SQ .*CAKE ANN .* MOBILE PURCHASE Gloucester MA/,
   },
@@ -510,6 +525,11 @@ const recognizers: Recognizer[] = [
     category: Category.DINING,
     vendor: "Cheesecake Factory",
     pattern: "CHEESECAKE CHESTNUT HI199 BOYLSTON ST CHESTNUT HILL02467 MA USA",
+  },
+  {
+    category: Category.DINING,
+    vendor: "Cheesy Street Grill",
+    pattern: "CHEESYSTREETGRILL",
   },
   {
     category: Category.DINING,
@@ -788,11 +808,6 @@ const recognizers: Recognizer[] = [
   },
   {
     category: Category.DINING,
-    vendor: "Cheesy Street Grill",
-    pattern: "CHEESYSTREETGRILL",
-  },
-  {
-    category: Category.DINING,
     vendor: null,
     pattern: "JORDANS IMAX READING READING ",
   },
@@ -800,6 +815,16 @@ const recognizers: Recognizer[] = [
     category: Category.DINING,
     vendor: null,
     pattern: "MM 8.5 EASTBOUND MA TP857 MM 8.5 EAST W BECKET 01238 MA USA",
+  },
+  {
+    category: Category.DINING,
+    vendor: null,
+    pattern: "CAPPAS TRACKSIDE RESTU1 GROVE STREET MELROSE 02176 MA USA",
+  },
+  {
+    category: Category.DINING,
+    vendor: null,
+    pattern: "OKI POKI LYNNFIELD 1205 MARKET ST LYNNFIELD 01940 MA USA",
   },
   {
     category: Category.ELECTRONICS,
@@ -890,6 +915,11 @@ const recognizers: Recognizer[] = [
     category: Category.ENTERTAINMENT,
     vendor: null,
     pattern: "KIMBALL FARM MINI GOLF400 LITTLETON ROAD WESTFORD 01886 MA USA",
+  },
+  {
+    category: Category.ENTERTAINMENT,
+    vendor: null,
+    pattern: /STEAM PURCHASE/,
   },
   {
     category: Category.GARDEN,
@@ -1005,6 +1035,11 @@ const recognizers: Recognizer[] = [
     category: Category.GROCERIES,
     vendor: null,
     pattern: "D'AGOSTINO'S FOODS ",
+  },
+  {
+    category: Category.GROCERIES,
+    vendor: null,
+    pattern: "SP HOPLARK 3039967541 CO",
   },
   {
     category: Category.HEALTH,
@@ -1243,6 +1278,11 @@ const recognizers: Recognizer[] = [
   },
   {
     category: Category.LUXURY_FOOD,
+    vendor: "Prospect Hill / Tower drinks",
+    pattern: "SQ *PROSPECT HILL BEVE",
+  },
+  {
+    category: Category.LUXURY_FOOD,
     vendor: "Russell Orchards",
     pattern: "RUSSELL ORCHARDS ",
   },
@@ -1262,6 +1302,26 @@ const recognizers: Recognizer[] = [
     pattern: "COLBY FARM 50 SCOTLAND RD NEWBURY 01951 MA USA",
   },
   {
+    category: Category.LUXURY_FOOD,
+    vendor: null,
+    pattern: "SQ *DRIVE-BY PIES",
+  },
+  {
+    category: Category.LUXURY_FOOD,
+    vendor: null,
+    pattern: "SQ *PURPLE CARROT",
+  },
+  {
+    category: Category.LUXURY_FOOD,
+    vendor: null,
+    pattern: "SQ *FARMER DAVE",
+  },
+  {
+    category: Category.LUXURY_FOOD,
+    vendor: null,
+    pattern: "SQ *WAKEFIELD FARMERS",
+  },
+  {
     category: Category.MEDIA,
     vendor: "Apple",
     pattern: "APPLE.COM/BILL ",
@@ -1275,6 +1335,11 @@ const recognizers: Recognizer[] = [
     category: Category.MEDIA,
     vendor: "Zoop",
     pattern: "ZOOP.GG* RAB292AQX2 221 N. BROAD ST. SUITE 3A MIDDLETOWN 19709 DE USA",
+  },
+  {
+    category: Category.MEDIA,
+    vendor: null,
+    pattern: "PAYPAL *MATT STEADY 888-221-1161 CA",
   },
   {
     category: Category.MISC,
@@ -1305,6 +1370,11 @@ const recognizers: Recognizer[] = [
     category: Category.MISC,
     vendor: null,
     pattern: "GOPOD MOBILE PURCHASE 1 SCIENCE PARK, BOSTON 02114 MA USA",
+  },
+  {
+    category: Category.MISC,
+    vendor: null,
+    pattern: "USCIS ELIS N400 WASHINGTON DC",
   },
   {
     category: Category.MORTGAGE,
@@ -1355,6 +1425,16 @@ const recognizers: Recognizer[] = [
     category: Category.ONLINE_SERVICES,
     vendor: "Wirecutter",
     pattern: "NYTimes*NYTimes 800-698-4637 NY",
+  },
+  {
+    category: Category.ONLINE_SERVICES,
+    vendor: null,
+    pattern: "DEADSUPERHERO, UNC. 14032 W MUSTANG STREETUNIT 3733 LUKE AFB 85309 AZ USA",
+  },
+  {
+    category: Category.PERSONAL_CARE,
+    vendor: "Loop Earplugs",
+    pattern: "SP LOOPUS 6463387347 NY",
   },
   {
     category: Category.REPAYMENT_IN,
@@ -1456,75 +1536,6 @@ const recognizers: Recognizer[] = [
     vendor: "WMGLD",
     pattern: "Town of Wakefiel DES: WATER ",
   },
-
-  { category: Category.LUXURY_FOOD, vendor: null, pattern: "SQ *DRIVE-BY PIES" },
-  { category: Category.LUXURY_FOOD, vendor: null, pattern: "SQ *PURPLE CARROT" },
-  { category: Category.LUXURY_FOOD, vendor: null, pattern: "SQ *FARMER DAVE" },
-  { category: Category.LUXURY_FOOD, vendor: null, pattern: "SQ *WAKEFIELD FARMERS" },
-  {
-    category: Category.LUXURY_FOOD,
-    vendor: "Prospect Hill / Tower drinks",
-    pattern: "SQ *PROSPECT HILL BEVE",
-  },
-
-
-  {
-    "category": Category.DINING,
-    "vendor": "Caffe Nero",
-    "pattern": "1040 CAFFE NEERO WOBUR290 MISHAWUM RD STE WOBURN 01801-2289MA USA"
-  },
-  {
-    "category": Category.DINING,
-    "vendor": null,
-    "pattern": "CAPPAS TRACKSIDE RESTU1 GROVE STREET MELROSE 02176 MA USA"
-  },
-  {
-    "category": Category.ONLINE_SERVICES,
-    "vendor": null,
-    "pattern": "DEADSUPERHERO, UNC. 14032 W MUSTANG STREETUNIT 3733 LUKE AFB 85309 AZ USA"
-  },
-  {
-    "category": Category.CAR,
-    "vendor": "Franks Auto Inspection",
-    "pattern": "FRANKS AUTO INSPECTION45 RICHARDSON AVE WAKEFIELD 01880 MA USA"
-  },
-  {
-    "category": Category.CHARITY, // really political, no such category
-    "vendor": "MOVEON.ORG",
-    "pattern": "MOVEON.ORG POLITICAL A"
-  },
-  {
-    "category": Category.DINING,
-    "vendor": null,
-    "pattern": "OKI POKI LYNNFIELD 1205 MARKET ST LYNNFIELD 01940 MA USA"
-  },
-  {
-    "category": Category.MEDIA,
-    "vendor": null,
-    "pattern": "PAYPAL *MATT STEADY 888-221-1161 CA"
-  },
-  {
-    "category": Category.GROCERIES,
-    "vendor": null,
-    "pattern": "SP HOPLARK 3039967541 CO"
-  },
-  {
-    "category": Category.PERSONAL_CARE,
-    "vendor": "Loop Earplugs",
-    "pattern": "SP LOOPUS 6463387347 NY"
-  },
-  {
-    "category": Category.MISC,
-    "vendor": null,
-    "pattern": "USCIS ELIS N400 WASHINGTON DC"
-  },
-  {
-    "category": Category.ENTERTAINMENT,
-    "vendor": null,
-    "pattern": /STEAM PURCHASE/
-  },
-
-
 ];
 
 export default recognizers;
