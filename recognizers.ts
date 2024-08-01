@@ -38,7 +38,7 @@ const recognizers: Recognizer[] = [
   {
     category: Category.CHARITY,
     vendor: "Act Blue",
-    pattern: "ACTBLUE_",
+    pattern: "ACTBLUE",
   },
   {
     category: Category.DEPOSIT,
@@ -439,7 +439,7 @@ const recognizers: Recognizer[] = [
   {
     category: Category.CHARITY,
     vendor: "American Bird Conservancy",
-    pattern: "AMERICAN BIRD CONSERVAPO BOX 249 540-2535780 20115 VA USA",
+    pattern: "AMERICAN BIRD CONSERVA",
   },
   {
     category: Category.CHARITY,
@@ -788,7 +788,7 @@ const recognizers: Recognizer[] = [
   },
   {
     category: Category.DINING,
-    vendor: null,
+    vendor: "Cheesy Street Grill",
     pattern: "CHEESYSTREETGRILL",
   },
   {
@@ -1456,6 +1456,75 @@ const recognizers: Recognizer[] = [
     vendor: "WMGLD",
     pattern: "Town of Wakefiel DES: WATER ",
   },
+
+  { category: Category.LUXURY_FOOD, vendor: null, pattern: "SQ *DRIVE-BY PIES" },
+  { category: Category.LUXURY_FOOD, vendor: null, pattern: "SQ *PURPLE CARROT" },
+  { category: Category.LUXURY_FOOD, vendor: null, pattern: "SQ *FARMER DAVE" },
+  { category: Category.LUXURY_FOOD, vendor: null, pattern: "SQ *WAKEFIELD FARMERS" },
+  {
+    category: Category.LUXURY_FOOD,
+    vendor: "Prospect Hill / Tower drinks",
+    pattern: "SQ *PROSPECT HILL BEVE",
+  },
+
+
+  {
+    "category": Category.DINING,
+    "vendor": "Caffe Nero",
+    "pattern": "1040 CAFFE NEERO WOBUR290 MISHAWUM RD STE WOBURN 01801-2289MA USA"
+  },
+  {
+    "category": Category.DINING,
+    "vendor": null,
+    "pattern": "CAPPAS TRACKSIDE RESTU1 GROVE STREET MELROSE 02176 MA USA"
+  },
+  {
+    "category": Category.ONLINE_SERVICES,
+    "vendor": null,
+    "pattern": "DEADSUPERHERO, UNC. 14032 W MUSTANG STREETUNIT 3733 LUKE AFB 85309 AZ USA"
+  },
+  {
+    "category": Category.CAR,
+    "vendor": "Franks Auto Inspection",
+    "pattern": "FRANKS AUTO INSPECTION45 RICHARDSON AVE WAKEFIELD 01880 MA USA"
+  },
+  {
+    "category": Category.CHARITY, // really political, no such category
+    "vendor": "MOVEON.ORG",
+    "pattern": "MOVEON.ORG POLITICAL A"
+  },
+  {
+    "category": Category.DINING,
+    "vendor": null,
+    "pattern": "OKI POKI LYNNFIELD 1205 MARKET ST LYNNFIELD 01940 MA USA"
+  },
+  {
+    "category": Category.MEDIA,
+    "vendor": null,
+    "pattern": "PAYPAL *MATT STEADY 888-221-1161 CA"
+  },
+  {
+    "category": Category.GROCERIES,
+    "vendor": null,
+    "pattern": "SP HOPLARK 3039967541 CO"
+  },
+  {
+    "category": Category.PERSONAL_CARE,
+    "vendor": "Loop Earplugs",
+    "pattern": "SP LOOPUS 6463387347 NY"
+  },
+  {
+    "category": Category.MISC,
+    "vendor": null,
+    "pattern": "USCIS ELIS N400 WASHINGTON DC"
+  },
+  {
+    "category": Category.ENTERTAINMENT,
+    "vendor": null,
+    "pattern": /STEAM PURCHASE/
+  },
+
+
 ];
 
 export default recognizers;
