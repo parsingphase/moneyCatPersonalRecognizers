@@ -6,6 +6,11 @@ import { Category, Recognizer } from "@/lib/types";
 
 const recognizers: Recognizer[] = [
   {
+    category: Category.CREDIT_CARD_PAYMENT,
+    vendor: "Apple Card",
+    pattern: "Ach Deposit Internet Transfer From Account Ending In 9012", // Special case for apple card
+  },
+  {
     category: Category.BANK_FEES,
     vendor: "BofA",
     pattern: "Bank of America DES:CASHREWARD ",
@@ -1038,8 +1043,13 @@ const recognizers: Recognizer[] = [
   },
   {
     category: Category.GROCERIES,
-    vendor: null,
+    vendor: "Hoplark",
     pattern: "SP HOPLARK 3039967541 CO",
+  },
+  {
+    category: Category.GROCERIES,
+    vendor: "Hoplark",
+    pattern: "HOPLARK",
   },
   {
     category: Category.HEALTH,
@@ -1535,6 +1545,248 @@ const recognizers: Recognizer[] = [
     category: Category.UTILITIES,
     vendor: "WMGLD",
     pattern: "Town of Wakefiel DES: WATER ",
+  },
+  {
+    category: Category.TRANSFER,
+    vendor: null,
+    pattern: "Richard Edward George",
+  },
+  {
+    category: Category.TRANSFER,
+    vendor: null,
+    pattern: "Top Up",
+  },
+  {
+    category: Category.TRANSFER,
+    vendor: null,
+    pattern: "Round up",
+  },
+  {
+    category: Category.SAVINGS,
+    vendor: null,
+    pattern: "AMERICANEXPRESS",
+  },
+  {
+    category: Category.DEPOSIT,
+    vendor: null,
+    pattern: "Direct Deposit - Sutton Bank",
+  },
+  {
+    category: Category.RENT,
+    vendor: null,
+    pattern: "YPS*EQUITYRESIDENTIALM",
+  },
+  {
+    category: Category.MISC,
+    vendor: null,
+    pattern: "VZWRLSS*PREPAID PYMNT  888-294-6804  FL ", // recurrent active card checks
+  },
+  {
+    category: Category.LUXURY_FOOD,
+    vendor: null,
+    pattern: "CARDULLOS GOURMET FOOD BOSTON",
+  },
+  {
+    category: Category.MEDIA,
+    vendor: null,
+    pattern: "PORTER SQUARE BOOKS",
+  },
+
+  {
+    category: Category.DINING,
+    vendor: "(via Square)",
+    pattern: "SQU*",
+  },
+
+  {
+    category: Category.LUXURY_FOOD,
+    vendor: null,
+    pattern: "PORTER SQUARE SPIRITS",
+  },
+  {
+    category: Category.LUXURY_FOOD,
+    vendor: null,
+    pattern: "LA BURDICK CHOCOLATE",
+  },
+
+  {
+    category: Category.DINING,
+    vendor: "(via Doordash)",
+    pattern: "DOORDASH",
+  },
+  {
+    category: Category.ENTERTAINMENT,
+    vendor: "GOG",
+    pattern: "GOG.COM",
+  },
+
+  {
+    category: Category.HOBBIES,
+    vendor: null,
+    pattern: "MICRO CEN 730 Memorial Cambridge",
+  },
+
+  {
+    category: Category.DINING,
+    vendor: null,
+    pattern: "CAMBRIDGE COMMON RESTA",
+  },
+
+  {
+    category: Category.ELECTRONICS,
+    vendor: null,
+    pattern: /^CANARY\s+NEW YORK/,
+  },
+
+  {
+    category: Category.COMMUNICATIONS,
+    vendor: null,
+    pattern: "VZWRLSS*PRPAY AUTOPAY",
+  },
+
+  {
+    category: Category.LUXURY_FOOD,
+    vendor: null,
+    pattern: "Stumptown Coffee Roast",
+  },
+
+  {
+    category: Category.ENTERTAINMENT,
+    vendor: "GOG",
+    pattern: "GOG sp. z o.o.",
+  },
+  {
+    category: Category.TRANSFER,
+    vendor: null,
+    pattern: "Adv Plus Banking",
+  },
+
+  {
+    category: Category.CAR,
+    vendor: null,
+    pattern: "RMV BOSTO",
+  },
+  {
+    category: Category.DINING,
+    vendor: null,
+    pattern: "SALT AND OLIVE",
+  },
+  {
+    category: Category.HOME_HARDWARE,
+    vendor: null,
+    pattern: "SIMPLEHUMAN COM",
+  },
+  {
+    category: Category.ELECTRONICS,
+    vendor: "Lego",
+    pattern: "LEGO ",
+  },
+
+  {
+    category: Category.LUXURY_FOOD,
+    vendor: null,
+    pattern: "EATALY BOSTON",
+  },
+  {
+    category: Category.CHARITY,
+    vendor: null,
+    pattern: "FEEDING AMERICA",
+  },
+  {
+    category: Category.ONLINE_SERVICES,
+    vendor: "Flickr",
+    pattern: "FLICKR.COM ",
+  },
+
+  {
+    category: Category.CHARITY,
+    vendor: null,
+    pattern: "MOVEON.ORG CIVIC ",
+  },
+  {
+    category: Category.ENTERTAINMENT,
+    vendor: null,
+    pattern: "MUSEUM OF SCIENCE",
+  },
+
+  {
+    category: Category.DINING,
+    vendor: "Caffe Nero",
+    pattern: "LEVELUP*CAFFNERO",
+  },
+  {
+    category: Category.DINING,
+    vendor: "Sweetgreen",
+    pattern: "LEVELUP*SWEETGREEN",
+  },
+  {
+    category: Category.LUXURY_FOOD,
+    vendor: "Craft Beer Club",
+    pattern: "CRAFTBEERCLUB.COM",
+  },
+  {
+    category: Category.LUXURY_FOOD,
+    vendor: "The Beer Connoisseur",
+    pattern: "THE BEER CONNOISSEUR",
+  },
+  {
+    category: Category.CAR,
+    vendor: "Park Mobile",
+    pattern: "PARKMOBILE",
+  },
+  {
+    category: Category.MEDIA,
+    vendor: "New Scientist",
+    pattern: "NEW SCIENTIST",
+  },
+
+  {
+    category: Category.MEDIA,
+    vendor: "Harvard co-op bookstore",
+    pattern: "HARVARD COOP BKST",
+  },
+  {
+    category: Category.MEDIA, // may be books or games
+    vendor: null,
+    pattern: "HUMBLEBUNDLE COM",
+  },
+  {
+    category: Category.GROCERIES,
+    vendor: "King Alfred Flour",
+    pattern: "KAF*BAKER'S CATALOG",
+  },
+  {
+    category: Category.MISC,
+    vendor: null,
+    pattern: "KICKSTARTER ",
+  },
+  {
+    category: Category.MEDIA,
+    vendor: "Washington Post",
+    pattern: "SUB*WASHPOST",
+  },
+
+  // Use source categories if statement supports it. Note that statement categories can be very approximate,
+  // so this is a fallback
+  {
+    category: Category.DINING,
+    vendor: "(source category)",
+    sourceCategory: "Eating out",
+  },
+  {
+    category: Category.GROCERIES,
+    vendor: "(source category)",
+    sourceCategory: "Groceries",
+  },
+  {
+    category: Category.TRANSFER,
+    vendor: "(source category)",
+    sourceCategory: "Transfers",
+  },
+  {
+    category: Category.TRANSFER,
+    vendor: "(source category)",
+    sourceCategory: "Savings", // Monzo implies this for a lot of pot transfers
   },
 ];
 
