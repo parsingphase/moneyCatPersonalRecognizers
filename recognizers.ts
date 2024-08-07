@@ -46,7 +46,7 @@ const recognizers: Recognizer[] = [
     pattern: "ACLU 212-549-2543 NYACLU",
   },
   {
-    category: Category.CHARITY,
+    category: Category.POLITICAL_DONATIONS,
     vendor: "Act Blue",
     pattern: "ACTBLUE",
   },
@@ -457,7 +457,7 @@ const recognizers: Recognizer[] = [
     pattern: "GBFB.ORG",
   },
   {
-    category: Category.CHARITY,
+    category: Category.POLITICAL_DONATIONS,
     vendor: "MOVEON.ORG",
     pattern: "MOVEON.ORG POLITICAL A",
   },
@@ -1334,7 +1334,7 @@ const recognizers: Recognizer[] = [
   {
     category: Category.MEDIA,
     vendor: "Apple",
-    pattern: "APPLE.COM/BILL ",
+    pattern: "APPLE.COM/BILL",
   },
   {
     category: Category.MEDIA,
@@ -1577,7 +1577,7 @@ const recognizers: Recognizer[] = [
     pattern: "YPS*EQUITYRESIDENTIALM",
   },
   {
-    category: Category.MISC,
+    category: Category.COMMUNICATIONS,
     vendor: null,
     pattern: "VZWRLSS*PREPAID PYMNT  888-294-6804  FL ", // recurrent active card checks
   },
@@ -1699,7 +1699,7 @@ const recognizers: Recognizer[] = [
   },
 
   {
-    category: Category.CHARITY,
+    category: Category.POLITICAL_DONATIONS,
     vendor: null,
     pattern: "MOVEON.ORG CIVIC ",
   },
@@ -1764,6 +1764,87 @@ const recognizers: Recognizer[] = [
     category: Category.MEDIA,
     vendor: "Washington Post",
     pattern: "SUB*WASHPOST",
+  },
+  {
+    category: Category.LUXURY_FOOD,
+    vendor: "Cambridge Wine & Spirits",
+    pattern: "CAMBRIDGE WINE & SPIRI",
+  },
+
+  {
+    category: Category.HOBBIES,
+    vendor: "Avenza Maps",
+    pattern: "PAYPAL *AVENZA MAPS",
+  },
+  {
+    category: Category.POLITICAL_DONATIONS,
+    vendor: "Open Democracy",
+    pattern: "PAYPAL *OPENDEMOCRA",
+  },
+  {
+    category: Category.HOME_HARDWARE,
+    vendor: null,
+    pattern: "THE PRINTING OFFICE OF Boston        MA ", // Art?
+  },
+  {
+    category: Category.PERSONAL_CARE,
+    vendor: null,
+    pattern: "The Body Shop",
+  },
+  {
+    category: Category.HEALTH,
+    vendor: null,
+    pattern: "CAMBRIDGE HEALTH MYCHA",
+  },
+  {
+    category: Category.DINING,
+    vendor: "Cheesecake Factory",
+    pattern: "CHEESECAKE 94 ONE DINE",
+  },
+  {
+    category: Category.HOME_HARDWARE,
+    vendor: "Crate & Barrel",
+    pattern: "CRATE & BARREL ",
+  },
+  {
+    category: Category.ONLINE_SERVICES,
+    vendor: "Flickr",
+    pattern: "DRI*Flickr",
+  },
+  {
+    category: Category.HOBBIES,
+    vendor: "Ace Wheelworks", // bike
+    pattern: "ACE WHEEL ACE WHEELWOR SOMERVILLE     MA",
+  },
+  {
+    category: Category.MEDIA,
+    vendor: "Newbury Comics",
+    pattern: "NEWBURY COMICS",
+  },
+  {
+    category: Category.GROCERIES,
+    vendor: "Thistle and Shamrock",
+    pattern: "WPY*WPY*THISTLE AND SH 866-819-1294  CA ",
+  },
+  {
+    category: Category.HOBBIES,
+    vendor: null,
+    pattern: "KICKSTARTER: GPS, SEQU Lenexa",
+  },
+  {
+    category: Category.ELECTRONICS,
+    vendor: null,
+    pattern: "KICKSTARTER: VECTOR UN Pittsburgh    PA ",
+  },
+  {
+    category: Category.ONLINE_SERVICES,
+    vendor: "iNaturalist",
+    pattern: "CALACADEMY",
+  },
+  {
+    category: Category.ONLINE_SERVICES,
+    vendor: "Google Cloud",
+    pattern: "GOOGLE *CLOUD_01B364-B G.CO/HELPPAY# IRL",
   },
 
   // Use source categories if statement supports it. Note that statement categories can be very approximate,
