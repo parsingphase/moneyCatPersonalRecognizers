@@ -1870,122 +1870,119 @@ const recognizers: Recognizer[] = [
     sourceCategory: "Savings", // Monzo implies this for a lot of pot transfers
   },
 
-
   {
-    "category": Category.CAR,
-    "vendor": null,
-    "pattern": "BERLIN IRVIN"
+    category: Category.CAR,
+    vendor: null,
+    pattern: "BERLIN IRVIN",
   },
   {
-    "category": Category.DINING,
-    "vendor": null,
-    "pattern": "BICKFORDS GRILLE "
+    category: Category.DINING,
+    vendor: null,
+    pattern: "BICKFORDS GRILLE ",
   },
   {
-    "category": Category.GARDEN,
-    "vendor": null,
-    "pattern": "BLUE STEM NATIVES"
+    category: Category.GARDEN,
+    vendor: null,
+    pattern: "BLUE STEM NATIVES",
   },
   {
-    "category": Category.CAR,
-    "vendor": null,
-    "pattern": "BONNELL MOTORS"
+    category: Category.CAR,
+    vendor: null,
+    pattern: "BONNELL MOTORS",
   },
   {
-    "category": Category.DINING,
-    "vendor": null,
-    "pattern": "COMMON MAN ROADSIDE"
+    category: Category.DINING,
+    vendor: null,
+    pattern: "COMMON MAN ROADSIDE",
   },
   {
-    "category": Category.BANK_FEES,
-    "vendor": null,
-    "pattern": "FOREIGN TRANS FEE ERROR CORRECTION"
+    category: Category.BANK_FEES,
+    vendor: null,
+    pattern: "FOREIGN TRANS FEE ERROR CORRECTION",
   },
   {
-    "category": Category.ONLINE_SERVICES,
-    "vendor": null,
-    "pattern": "Gandi order 129971515"
+    category: Category.ONLINE_SERVICES,
+    vendor: null,
+    pattern: "Gandi order 129971515",
   },
   {
-    "category": Category.HOME_HARDWARE,
-    "vendor": null,
-    "pattern": "HOMEDEPOT.COM"
-  },
-
-  {
-    "category": Category.GIFTS,
-    "vendor": null,
-    "pattern": "VON TRAPP BREWING GIFT1333 LUCE HILL RD STOWE 05672 VT USA"
+    category: Category.HOME_HARDWARE,
+    vendor: null,
+    pattern: "HOMEDEPOT.COM",
   },
 
   {
-    "category": Category.HOBBIES,
-    "vendor": null,
-    "pattern": "WOODBURY MOUNTAIN TOYS MONTPELIER    VT "
-  },
-  {
-    "category": Category.DINING,
-    "vendor": null,
-    "pattern": /von Trapp Brewing.*Stowe.*VT/
+    category: Category.GIFTS,
+    vendor: null,
+    pattern: "VON TRAPP BREWING GIFT1333 LUCE HILL RD STOWE 05672 VT USA",
   },
 
   {
-    "category": Category.TRAVEL,
-    "vendor": 'Lyft',
-    "pattern": "LYFT "
-  },
-
-
-  {
-    "category": Category.HOME_HARDWARE,
-    "vendor": "Jordan's",
-    "pattern": "TD BANK DES:PAYMENT ID:EVA M GEORGE "
+    category: Category.HOBBIES,
+    vendor: null,
+    pattern: "WOODBURY MOUNTAIN TOYS MONTPELIER    VT ",
   },
   {
-    "category": Category.GIFTS,
-    "vendor": null,
-    "pattern": "TRAPP FAMILY LODGE (HG700 TRAPP HILL RD STOWE 05672 VT USA"
+    category: Category.DINING,
+    vendor: null,
+    pattern: /von Trapp Brewing.*Stowe.*VT/,
   },
 
   {
-    "category": Category.GIFTS,
-    "vendor": null,
-    "pattern": "SAVEOURMONARCHS.ORG 6408 INDIAN HILLS ROAD EDINA 55439 MN USA"
+    category: Category.TRAVEL,
+    vendor: "Lyft",
+    pattern: "LYFT ",
   },
 
   {
-    "category": Category.LUXURY_FOOD,
-    "vendor": "Stowe Mercantile",
-    "pattern": "Stowe Mer"
+    category: Category.HOME_HARDWARE,
+    vendor: "Jordan's",
+    pattern: "TD BANK DES:PAYMENT ID:EVA M GEORGE ",
+  },
+  {
+    category: Category.GIFTS,
+    vendor: null,
+    pattern: "TRAPP FAMILY LODGE (HG700 TRAPP HILL RD STOWE 05672 VT USA",
   },
 
   {
-    "category": Category.SALARY,
-    "vendor": null,
-    "pattern": "166785 EMBARK VE, DIR DEP"
-  },
-  {
-    "category": Category.BANK_FEES,
-    "vendor": null,
-    "pattern": "ADJUSTMENT TO BALANCE"
+    category: Category.GIFTS,
+    vendor: null,
+    pattern: "SAVEOURMONARCHS.ORG 6408 INDIAN HILLS ROAD EDINA 55439 MN USA",
   },
 
   {
-    "category": Category.BANK_FEES,
-    "vendor": null,
-    "pattern": "Referral bonus 🎉"
-  },
-  {
-    "category": Category.TRANSFER,
-    "vendor": null,
-    "pattern": "WISE US INC DES:RICHARD GE"
-  },
-  {
-    "category": Category.BANK_FEES,
-    "vendor": null,
-    "pattern": "PAYLOCITY, ACCTVERIFY"
+    category: Category.LUXURY_FOOD,
+    vendor: "Stowe Mercantile",
+    pattern: "Stowe Mer",
   },
 
+  {
+    category: Category.SALARY,
+    vendor: null,
+    pattern: "166785 EMBARK VE, DIR DEP",
+  },
+  {
+    category: Category.BANK_FEES,
+    vendor: null,
+    pattern: "ADJUSTMENT TO BALANCE",
+  },
+
+  {
+    category: Category.BANK_FEES,
+    vendor: null,
+    pattern: "Referral bonus 🎉",
+  },
+  {
+    category: Category.TRANSFER,
+    vendor: null,
+    pattern: "WISE US INC DES:RICHARD GE",
+  },
+  {
+    category: Category.BANK_FEES,
+    vendor: null,
+    pattern: "PAYLOCITY, ACCTVERIFY",
+  },
 ];
 
 export default recognizers;
