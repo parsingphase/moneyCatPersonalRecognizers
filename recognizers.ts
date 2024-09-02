@@ -181,6 +181,16 @@ const recognizers: Recognizer[] = [
     pattern: "PAYLOCITY DES:ACCTVERIFY ",
   },
   {
+    category: Category.SALARY,
+    vendor: null,
+    pattern: "PAYLOCITY, ACCTVERIFY",
+  },
+  {
+    category: Category.SALARY,
+    vendor: null,
+    pattern: "PAYLOCITY",
+  },
+  {
     category: Category.TAX,
     vendor: "MA",
     pattern:
@@ -1855,9 +1865,19 @@ const recognizers: Recognizer[] = [
     sourceCategory: "Eating out",
   },
   {
+    category: Category.DINING,
+    vendor: "(source category)",
+    sourceCategory: "Restaurants",
+  },
+  {
     category: Category.GROCERIES,
     vendor: "(source category)",
     sourceCategory: "Groceries",
+  },
+  {
+    category: Category.CAR,
+    vendor: "(source category)",
+    sourceCategory: "Gasoline",
   },
   {
     category: Category.TRANSFER,
@@ -1894,6 +1914,11 @@ const recognizers: Recognizer[] = [
     category: Category.DINING,
     vendor: null,
     pattern: "COMMON MAN ROADSIDE",
+  },
+  {
+    category: Category.DINING,
+    vendor: null,
+    pattern: "COMMON MAN NO. IRVING",
   },
   {
     category: Category.BANK_FEES,
@@ -1978,10 +2003,31 @@ const recognizers: Recognizer[] = [
     vendor: null,
     pattern: "WISE US INC DES:RICHARD GE",
   },
+
   {
-    category: Category.BANK_FEES,
+    category: Category.DINING,
+    vendor: "Sonic",
+    pattern: "SONIC DRIVE IN",
+  },
+  {
+    category: Category.TRAVEL,
+    vendor: "Trapp Family Lodge",
+    pattern: "TRAPP FAMILY LODGE INC STOWE VT",
+  },
+  {
+    category: Category.LUXURY_FOOD,
+    vendor: "Mingle Mocktails",
+    pattern: "MINGLE MOCKTAILS 8882455566 PA",
+  },
+  {
+    category: Category.DINING,
+    vendor: "Ben & Jerry's",
+    pattern: "AR* BEN & JERRYS 4157295247 CA",
+  },
+  {
+    category: Category.HOME_HARDWARE,
     vendor: null,
-    pattern: "PAYLOCITY, ACCTVERIFY",
+    pattern: "LS THE COUNTRY STORE   STOWE         VT ",
   },
 ];
 
