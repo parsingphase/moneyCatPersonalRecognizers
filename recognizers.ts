@@ -17,7 +17,7 @@ const recognizers: Recognizer[] = [
   },
   {
     category: Category.BIG_BOX_STORES,
-    vendor: "BJ's",
+    vendor: "BJ's Online",
     pattern: "BJS.COM ",
   },
   {
@@ -116,7 +116,7 @@ const recognizers: Recognizer[] = [
     pattern: "CULTS3D.COM",
   },
   {
-    category: Category.HOBBIES,
+    category: Category.HOBBIES_BIRDFEEDING,
     vendor: "Wild Birds Unlimited",
     pattern: "WILD BIRDS UNLIMITED ",
   },
@@ -1067,7 +1067,7 @@ const recognizers: Recognizer[] = [
     pattern: "ALL3DP.COM ",
   },
   {
-    category: Category.HOBBIES,
+    category: Category.HOBBIES_BIRDFEEDING,
     vendor: "Bird Watcher's Supply and Gift",
     pattern: "BIRD WATCHER`S SUPP 194 ROUTE 1 NEWBURYPORT 01950 MA USA",
   },
@@ -1102,7 +1102,7 @@ const recognizers: Recognizer[] = [
     pattern: "HAIKUBOX ",
   },
   {
-    category: Category.HOBBIES,
+    category: Category.HOBBIES_BIRDFEEDING,
     vendor: "JCS Wildlife",
     pattern: "SP JCS WILDLIFE 8128672800 IN",
   },
@@ -1127,7 +1127,7 @@ const recognizers: Recognizer[] = [
     pattern: "SP HK MINTION KOWLOON KL",
   },
   {
-    category: Category.HOBBIES,
+    category: Category.HOBBIES_BIRDFEEDING,
     vendor: "My Bird Buddy",
     pattern: "MYBIRDBUDDY.COM ",
   },
@@ -1869,6 +1869,123 @@ const recognizers: Recognizer[] = [
     vendor: "(source category)",
     sourceCategory: "Savings", // Monzo implies this for a lot of pot transfers
   },
+
+
+  {
+    "category": Category.CAR,
+    "vendor": null,
+    "pattern": "BERLIN IRVIN"
+  },
+  {
+    "category": Category.DINING,
+    "vendor": null,
+    "pattern": "BICKFORDS GRILLE "
+  },
+  {
+    "category": Category.GARDEN,
+    "vendor": null,
+    "pattern": "BLUE STEM NATIVES"
+  },
+  {
+    "category": Category.CAR,
+    "vendor": null,
+    "pattern": "BONNELL MOTORS"
+  },
+  {
+    "category": Category.DINING,
+    "vendor": null,
+    "pattern": "COMMON MAN ROADSIDE"
+  },
+  {
+    "category": Category.BANK_FEES,
+    "vendor": null,
+    "pattern": "FOREIGN TRANS FEE ERROR CORRECTION"
+  },
+  {
+    "category": Category.ONLINE_SERVICES,
+    "vendor": null,
+    "pattern": "Gandi order 129971515"
+  },
+  {
+    "category": Category.HOME_HARDWARE,
+    "vendor": null,
+    "pattern": "HOMEDEPOT.COM"
+  },
+
+  {
+    "category": Category.GIFTS,
+    "vendor": null,
+    "pattern": "VON TRAPP BREWING GIFT1333 LUCE HILL RD STOWE 05672 VT USA"
+  },
+
+  {
+    "category": Category.HOBBIES,
+    "vendor": null,
+    "pattern": "WOODBURY MOUNTAIN TOYS MONTPELIER    VT "
+  },
+  {
+    "category": Category.DINING,
+    "vendor": null,
+    "pattern": /von Trapp Brewing.*Stowe.*VT/
+  },
+
+  {
+    "category": Category.TRAVEL,
+    "vendor": 'Lyft',
+    "pattern": "LYFT "
+  },
+
+
+  {
+    "category": Category.HOME_HARDWARE,
+    "vendor": "Jordan's",
+    "pattern": "TD BANK DES:PAYMENT ID:EVA M GEORGE "
+  },
+  {
+    "category": Category.GIFTS,
+    "vendor": null,
+    "pattern": "TRAPP FAMILY LODGE (HG700 TRAPP HILL RD STOWE 05672 VT USA"
+  },
+
+  {
+    "category": Category.GIFTS,
+    "vendor": null,
+    "pattern": "SAVEOURMONARCHS.ORG 6408 INDIAN HILLS ROAD EDINA 55439 MN USA"
+  },
+
+  {
+    "category": Category.LUXURY_FOOD,
+    "vendor": "Stowe Mercantile",
+    "pattern": "Stowe Mer"
+  },
+
+  {
+    "category": Category.SALARY,
+    "vendor": null,
+    "pattern": "166785 EMBARK VE, DIR DEP"
+  },
+  {
+    "category": Category.BANK_FEES,
+    "vendor": null,
+    "pattern": "ADJUSTMENT TO BALANCE"
+  },
+
+  {
+    "category": Category.BANK_FEES,
+    "vendor": null,
+    "pattern": "Referral bonus 🎉"
+  },
+  {
+    "category": Category.TRANSFER,
+    "vendor": null,
+    "pattern": "WISE US INC DES:RICHARD GE"
+  },
+  {
+    "category": Category.BANK_FEES,
+    "vendor": null,
+    "pattern": "PAYLOCITY, ACCTVERIFY"
+  },
+
 ];
 
 export default recognizers;
