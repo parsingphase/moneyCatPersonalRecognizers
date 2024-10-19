@@ -1164,7 +1164,7 @@ const recognizers: Recognizer[] = [
   {
     category: Category.HOBBIES,
     vendor: "Smashrun",
-    pattern: "SMASHRUN----PROMEMBER 9173103858 NY",
+    pattern: "SMASHRUN--",
   },
   {
     category: Category.HOBBIES,
@@ -2029,6 +2029,65 @@ const recognizers: Recognizer[] = [
     vendor: null,
     pattern: "LS THE COUNTRY STORE   STOWE         VT ",
   },
+
+  {
+    "category": Category.POLITICAL_DONATIONS,
+    "vendor": 'MoveOn',
+    "pattern": "SP MOVEON.ORG"
+  },
+  {
+    "category": Category.GIFTS,
+    "vendor": null,
+    "pattern": "THANKBOX - CLAIRE"
+  },
+  {
+    "category": Category.LUXURIES,
+    "vendor": null,
+    "pattern": "THE JUNIPER LOFT SOAP  EAST HARTLAND CT "
+  },
+
+  {
+    "category": Category.CHARITY,
+    "vendor": null,
+    "pattern": "KOFI DONATION "
+  },
+  {
+    "category": Category.TRAVEL,
+    "vendor": null,
+    "pattern": "MBTA-"
+  },
+  {
+    "category": Category.HOME_HARDWARE,
+    "vendor": 'Aubuchon Hardware',
+    "pattern": "AUBUCHON HARDWARE BEVERLY MAAPPLE PAY ENDING IN 8080"
+  },
+  {
+    "category": Category.ONLINE_SERVICES,
+    "vendor": null,
+    "pattern": "BIRDS OF THE WORLD 607-254-1143 NY"
+  },
+  {
+    "category": Category.LUXURY_FOOD,
+    "vendor": "Cannoli King",
+    "pattern": "CANNOLI KING"
+  },
+  {
+    "category": Category.ENTERTAINMENT,
+    "vendor": "American Miday (Big E)",
+    "pattern": "ALL STAR AMUSEMENTS 109 S MAIN ST FARMLAND 47340-9528IN USA"
+  },
+
+  {
+    "category": Category.BANK_FEES,
+    "vendor": null,
+    "pattern": /NORTH SHORE BA 0.*FEE/
+  },
+  {
+    "category": Category.CASH,
+    "vendor": null,
+    "pattern": "NORTH SHORE BA"
+  },
+
 ];
 
 export default recognizers;
