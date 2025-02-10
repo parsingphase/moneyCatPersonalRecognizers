@@ -11,6 +11,11 @@ const recognizers: Recognizer[] = [
     pattern: "Ach Deposit Internet Transfer From Account Ending In 9012", // Special case for apple card
   },
   {
+    category: Category.SAVINGS,
+    vendor: "American Express (withdrawal)",
+    pattern: "AMERICAN EXPRESS DES:TRANSFER",
+  },
+  {
     category: Category.BANK_FEES,
     vendor: "BofA",
     pattern: "Bank of America DES:CASHREWARD ",
@@ -829,11 +834,6 @@ const recognizers: Recognizer[] = [
   {
     category: Category.DINING,
     vendor: null,
-    pattern: "MM 8.5 EASTBOUND MA TP857 MM 8.5 EAST W BECKET 01238 MA USA",
-  },
-  {
-    category: Category.DINING,
-    vendor: null,
     pattern: "CAPPAS TRACKSIDE RESTU1 GROVE STREET MELROSE 02176 MA USA",
   },
   {
@@ -1414,7 +1414,7 @@ const recognizers: Recognizer[] = [
   {
     category: Category.ONLINE_SERVICES,
     vendor: "Experian",
-    pattern: /EXPERIAN.* CREDIT REPOR/,
+    pattern: "EXPERIAN* CREDIT REPO",
   },
   {
     category: Category.ONLINE_SERVICES,
@@ -1853,6 +1853,11 @@ const recognizers: Recognizer[] = [
   },
   {
     category: Category.ONLINE_SERVICES,
+    vendor: "iNaturalist",
+    pattern: "INATURALIST",
+  },
+  {
+    category: Category.ONLINE_SERVICES,
     vendor: "Google Cloud",
     pattern: "GOOGLE *CLOUD_01B364-B G.CO/HELPPAY# IRL",
   },
@@ -2031,63 +2036,213 @@ const recognizers: Recognizer[] = [
   },
 
   {
-    "category": Category.POLITICAL_DONATIONS,
-    "vendor": 'MoveOn',
-    "pattern": "SP MOVEON.ORG"
+    category: Category.POLITICAL_DONATIONS,
+    vendor: "MoveOn",
+    pattern: "SP MOVEON.ORG",
   },
   {
-    "category": Category.GIFTS,
-    "vendor": null,
-    "pattern": "THANKBOX - CLAIRE"
+    category: Category.GIFTS,
+    vendor: null,
+    pattern: "THANKBOX - CLAIRE",
   },
   {
-    "category": Category.LUXURIES,
-    "vendor": null,
-    "pattern": "THE JUNIPER LOFT SOAP  EAST HARTLAND CT "
+    category: Category.LUXURIES,
+    vendor: null,
+    pattern: "THE JUNIPER LOFT SOAP  EAST HARTLAND CT ",
   },
 
   {
-    "category": Category.CHARITY,
-    "vendor": null,
-    "pattern": "KOFI DONATION "
+    category: Category.CHARITY,
+    vendor: null,
+    pattern: "KOFI DONATION ",
   },
   {
-    "category": Category.TRAVEL,
-    "vendor": null,
-    "pattern": "MBTA-"
+    category: Category.TRAVEL,
+    vendor: null,
+    pattern: "MBTA-",
   },
   {
-    "category": Category.HOME_HARDWARE,
-    "vendor": 'Aubuchon Hardware',
-    "pattern": "AUBUCHON HARDWARE BEVERLY MAAPPLE PAY ENDING IN 8080"
+    category: Category.HOME_HARDWARE,
+    vendor: "Aubuchon Hardware",
+    pattern: "AUBUCHON HARDWARE BEVERLY MAAPPLE PAY ENDING IN 8080",
   },
   {
-    "category": Category.ONLINE_SERVICES,
-    "vendor": null,
-    "pattern": "BIRDS OF THE WORLD 607-254-1143 NY"
+    category: Category.ONLINE_SERVICES,
+    vendor: null,
+    pattern: "BIRDS OF THE WORLD 607-254-1143 NY",
   },
   {
-    "category": Category.LUXURY_FOOD,
-    "vendor": "Cannoli King",
-    "pattern": "CANNOLI KING"
+    category: Category.LUXURY_FOOD,
+    vendor: "Cannoli King",
+    pattern: "CANNOLI KING",
   },
   {
-    "category": Category.ENTERTAINMENT,
-    "vendor": "American Miday (Big E)",
-    "pattern": "ALL STAR AMUSEMENTS 109 S MAIN ST FARMLAND 47340-9528IN USA"
+    category: Category.ENTERTAINMENT,
+    vendor: "American Miday (Big E)",
+    pattern: "ALL STAR AMUSEMENTS 109 S MAIN ST FARMLAND 47340-9528IN USA",
   },
 
   {
-    "category": Category.BANK_FEES,
-    "vendor": null,
-    "pattern": /NORTH SHORE BA 0.*FEE/
+    category: Category.BANK_FEES,
+    vendor: null,
+    pattern: /NORTH SHORE BA 0.*FEE/,
   },
   {
-    "category": Category.CASH,
-    "vendor": null,
-    "pattern": "NORTH SHORE BA"
+    category: Category.CASH,
+    vendor: null,
+    pattern: "NORTH SHORE BA",
+  },
+  {
+    category: Category.HEALTH,
+    vendor: "AFC URGENT CARE",
+    pattern: "AFC URGENT CARE",
+  },
+  {
+    category: Category.HOBBIES,
+    vendor: "Ambient Weather",
+    pattern: "AMBIENTWEATHER.COM 888-221-1161 AZ",
+  },
+  {
+    category: Category.HOBBIES,
+    vendor: "Amplex (Bird Stamp?)",
+    pattern: "AMPLEX CORP 800-889-8871 TX",
+  },
+  {
+    category: Category.AMAZON,
+    vendor: "Amazon Marketplace",
+    pattern: "AMZNMktplace*",
   },
 
+  {
+    category: Category.CLOTHING,
+    vendor: "Bass Pro Shops",
+    pattern: "BASS PRO ONLINE U.S.",
+  },
+  {
+    category: Category.CAR,
+    vendor: "BJs",
+    pattern: "BJ'S FUEL 6 HUTCHINSON DANVERS        MA",
+  },
+  {
+    category: Category.CLOTHING,
+    vendor: "Duluth Trading",
+    pattern: "CS *DULUTHTRADING GC 855-793-8451",
+  },
+  {
+    category: Category.HOBBIES,
+    vendor: "Chess.com",
+    pattern: "Chess.com Chess.com",
+  },
+  {
+    category: Category.DINING,
+    vendor: "Dave's Hot Chicken",
+    pattern: "DAVESHOTCHICKEN ",
+  },
+
+  {
+    category: Category.ONLINE_SERVICES,
+    vendor: "Gandi",
+    pattern: /Gandi order \d+/,
+  },
+
+  {
+    category: Category.HOME_MAINTENANCE,
+    vendor: "Service Finance / Rite Window",
+    pattern: "SERVICE FINANCE DES:PAYMENTS ",
+  },
+
+  {
+    category: Category.CLOTHING,
+    vendor: "Levis",
+    pattern: "LEVIS.COM 800-923-6245 CA",
+  },
+  {
+    category: Category.TRAVEL,
+    vendor: "Mass Pike misc",
+    pattern: /MM [\d.]+ (EAST|WEST)BOUND MA T/,
+  },
+  {
+    category: Category.CAR,
+    vendor: "NAPA Auto",
+    pattern: "NAPA STORE #0609008    SAUGUS        MA ",
+  },
+  {
+    category: Category.POLITICAL_DONATIONS,
+    vendor: "Pizza to the polls",
+    pattern: "PIZZA TO THE POLLS 9712663544 OR",
+  },
+  {
+    category: Category.MEDIA,
+    vendor: "Pro Publica",
+    pattern: "PROPUBLICA 6199611892 NY",
+  },
+
+  {
+    category: Category.HOBBIES,
+    vendor: "Polymaker",
+    pattern: "SP POLYMAKER 3D PRIN",
+  },
+  {
+    category: Category.CLOTHING,
+    vendor: "Rockabilia",
+    pattern: "SP ROCKABILIA 9525561121 MN",
+  },
+  {
+    category: Category.CLOTHING,
+    vendor: "Spencer's Gifts",
+    pattern: "SPENCER GIFTS ",
+  },
+  {
+    category: Category.BIG_BOX_STORES,
+    vendor: "Target",
+    pattern: "TARGET.COM 800-591-3869 MN",
+  },
+  {
+    category: Category.GIFTS,
+    vendor: "The Chocolate Truffle",
+    pattern: "THE CHOCOLATE TRUFFL   READING       MA ",
+  },
+  {
+    category: Category.GIFTS,
+    vendor: "The Paper Store",
+    pattern: "The Paper Store 0040   Lynnfield     MA ",
+  },
+  {
+    category: Category.GIFTS,
+    vendor: "Whitelam Books",
+    pattern: "Whitelam Books",
+  },
+
+  {
+    category: Category.CAR,
+    vendor: "Shell",
+    pattern: "SHELL                  WAKEFIELD     MA ",
+  },
+  {
+    category: Category.CLOTHING,
+    vendor: "Bird Collective",
+    pattern: "SP BIRD COLLECTIVE 7189095711 NY",
+  },
+  {
+    category: Category.GIFTS,
+    vendor: "I Love Veterinary",
+    pattern: "SP ILOVEVETERINARY ",
+  },
+  {
+    category: Category.HOBBIES_BIRDFEEDING,
+    vendor: "Nature Niche",
+    pattern: "SP NATURE NICHE",
+  },
+  {
+    category: Category.CAR,
+    vendor: 'Gulf',
+    pattern: "GULF MART ",
+  },
+  {
+    category: Category.CAR,
+    vendor: 'Gulf',
+    pattern: "GULF STONEHAM ",
+  },
 ];
 
 export default recognizers;
