@@ -46,9 +46,14 @@ const recognizers: Recognizer[] = [
     pattern: "AAAS SCIENCE ",
   },
   {
-    category: Category.CHARITY,
+    category: Category.NON_DEDUCTIBLE_NGO_DONATION,
     vendor: "ACLU",
     pattern: "ACLU 212-549-2543 NYACLU",
+  },
+  {
+    category: Category.CHARITY,
+    vendor: "The Intercept",
+    pattern: "ACTBLUE* INTERCEPT.MED",
   },
   {
     category: Category.POLITICAL_DONATIONS,
@@ -844,7 +849,7 @@ const recognizers: Recognizer[] = [
   {
     category: Category.ELECTRONICS,
     vendor: "Apple",
-    pattern: /MONTHLY INSTALLMENTS \(\d+ OF 24\)/,
+    pattern: /MONTHLY INSTALLMENTS \(\d+ OF \d+\)/,
   },
   {
     category: Category.ELECTRONICS,
@@ -862,7 +867,7 @@ const recognizers: Recognizer[] = [
     pattern: "HUMBLEBUNDLE.COM 163 FREELON ST SAN FRANCISCO94107 CA USA",
   },
   {
-    category: Category.ENTERTAINMENT,
+    category: Category.CHARITY,
     vendor: "Mass Audubon",
     pattern: "MASS AUDUBON",
   },
@@ -897,12 +902,12 @@ const recognizers: Recognizer[] = [
     pattern: "EB THE CHOCOLATE EXPO 535 MISSION STREET 8014137200 94105 CA USA",
   },
   {
-    category: Category.ENTERTAINMENT,
+    category: Category.CHARITY,
     vendor: "The Trustees of Reservations",
     pattern: "THE TRUSTEES 200 HIGH ST 4TH FL BOSTON 02110 MA USA",
   },
   {
-    category: Category.ENTERTAINMENT,
+    category: Category.CHARITY,
     vendor: "The Trustees of Reservations",
     pattern: "AT* TRUSTEES RESV 200 HIGH STREET, 4TH FLOOR BOSTON 02110 MA USA",
   },
@@ -1318,8 +1323,8 @@ const recognizers: Recognizer[] = [
   },
   {
     category: Category.LUXURY_FOOD,
-    vendor: null,
-    pattern: "COLBY FARM 50 SCOTLAND RD NEWBURY 01951 MA USA",
+    vendor: "Colby Farm Stand",
+    pattern: "COLBY FARM ",
   },
   {
     category: Category.LUXURY_FOOD,
@@ -1398,7 +1403,7 @@ const recognizers: Recognizer[] = [
   },
   {
     category: Category.MORTGAGE,
-    vendor: "Guild",
+    vendor: "Guild Mortgage",
     pattern: "SPI*GUILD MORT APPRAIS5898 COPLEY DR 800-365-4441 92111 CA USA",
   },
   {
@@ -1937,7 +1942,7 @@ const recognizers: Recognizer[] = [
   },
   {
     category: Category.HOME_HARDWARE,
-    vendor: null,
+    vendor: "Home Depot",
     pattern: "HOMEDEPOT.COM",
   },
 
@@ -2103,6 +2108,11 @@ const recognizers: Recognizer[] = [
     pattern: "AMBIENTWEATHER.COM 888-221-1161 AZ",
   },
   {
+    "category": Category.HOBBIES,
+    "vendor": "Ambient Weather",
+    "pattern": "AMBIENTWEATHER.NET 8007844221 PA"
+  },
+  {
     category: Category.HOBBIES,
     vendor: "Amplex (Bird Stamp?)",
     pattern: "AMPLEX CORP 800-889-8871 TX",
@@ -2172,8 +2182,8 @@ const recognizers: Recognizer[] = [
     pattern: "PIZZA TO THE POLLS 9712663544 OR",
   },
   {
-    category: Category.MEDIA,
-    vendor: "Pro Publica",
+    category: Category.CHARITY,
+    vendor: "ProPublica",
     pattern: "PROPUBLICA 6199611892 NY",
   },
 
@@ -2243,6 +2253,284 @@ const recognizers: Recognizer[] = [
     vendor: 'Gulf',
     pattern: "GULF STONEHAM ",
   },
+
+  {
+    "category": Category.TRAVEL,
+    "vendor": null,
+    "pattern": "AC HOTEL BY MARRIOTT 125 FRONT STREET WORCESTER 01608 MA USA"
+  },
+
+
+
+  {
+    "category": null,
+    "vendor": null,
+    "pattern": "AMPLEX/DUCK STAMPS 800-889-8871 TX"
+  },
+  {
+    "category": null,
+    "vendor": null,
+    "pattern": "APEXMAGNETS.COM 3042571193 WV"
+  },
+  {
+    "category": Category.ENTERTAINMENT,
+    "vendor": "Apple",
+    "pattern": "APPLE ONLINE"
+  },
+  {
+    "category": Category.CAR,
+    "vendor": null,
+    "pattern": "BEST GAS"
+  },
+  {
+    "category": Category.HOBBIES_BIRDFEEDING,
+    vendor: "Bird Watcher's Supply and Gift",
+    "pattern": "BIRD WATCHER S SUPPLY & NEWBURYPORT MAAPPLE PAY ENDING IN 8080"
+  },
+  {
+    "category": Category.CAR,
+    "vendor": "BJ'S FUEL",
+    "pattern": "BJ'S FUEL"
+  },
+  {
+    "category": Category.ONLINE_SERVICES,
+    "vendor": "Board Game Arena",
+    "pattern": "BOARDGAMEARENA 0134521970 FRA"
+  },
+
+  {
+    "category": Category.GARDEN,
+    "vendor": null,
+    "pattern": "RUSSELL'S GARDEN"
+  },
+  {
+    "category": Category.HEALTH,
+    "vendor": null,
+    "pattern": "MED*TUFTS MEDICAL"
+  },
+
+
+  {
+    "category": Category.ONLINE_SERVICES,
+    "vendor": null,
+    "pattern": "DEADSUPERHERO, UNC. 14032 W MUSTANG STREET UNIT 3733 LUKE AFB 85309 AZ USA"
+  },
+  {
+    "category": Category.GARDEN,
+    "vendor": null,
+    "pattern": "ESSEX COUNTY COOPERATIVE TOPSFIELD MAAPPLE PAY ENDING IN 8080"
+  },
+  {
+    "category": Category.GARDEN,
+    "vendor": null,
+    "pattern": "EXTRACTIGATOR PRODUCTS 8557430353 CANAPPLE PAY ENDING IN 9684"
+  },
+  {
+    "category": Category.NON_DEDUCTIBLE_NGO_DONATION,
+    "vendor": null,
+    "pattern": "FW* WILD ONES 8334849255 CAAPPLE PAY ENDING IN 9684"
+  },
+  {
+    "category": Category.HOME_HARDWARE,
+    "vendor": null,
+    "pattern": "GE APPLIANCES 800-626-2005 KY"
+  },
+  {
+    "category": Category.TRAVEL,
+    "vendor": null,
+    "pattern": "HILTON HOTELS"
+  },
+  {
+    "category": Category.HOBBIES,
+    "vendor": null,
+    "pattern": "HUNT'S PHOTO"
+  },
+  {
+    "category": Category.DINING,
+    "vendor": null,
+    "pattern": "IPSWICH ALE BREWERS TA IPSWICH       MA "
+  },
+  {
+    "category": Category.CLOTHING,
+    "vendor": null,
+    "pattern": "J CREW FACTORY #114    MERRIMACK     NH "
+  },
+
+  {
+    "category": Category.ONLINE_SERVICES,
+    "vendor": null,
+    "pattern": "MICROSOFT*MICROSOFT 3 REDMOND WA"
+  },
+  {
+    "category": null,
+    "vendor": null,
+    "pattern": "MORETHANJUSTPARKS.COM 6788273125 GA"
+  },
+  {
+    "category": Category.LUXURY_FOOD,
+    "vendor": null,
+    "pattern": "NASTY NONNI'S"
+  },
+  {
+    "category": Category.HOBBIES,
+    "vendor": null,
+    "pattern": "NORTHWEST RIVER SUPPLI"
+  },
+  {
+    "category": Category.MISC,
+    "vendor": null,
+    "pattern": "PASSPORTSERVICES"
+  },
+  {
+    "category": Category.CAR,
+    "vendor": null,
+    "pattern": "RMV AAA "
+  },
+  {
+    "category": Category.CAR,
+    "vendor": null,
+    "pattern": "RMV E-SERVICES "
+  },
+
+
+  {
+    "category": Category.HOME_HARDWARE,
+    "vendor": null,
+    "pattern": "SMARTSIGN 718-797-1900 NY"
+  },
+  {
+    "category": Category.ENTERTAINMENT,
+    "vendor": null,
+    "pattern": "SNOW.COM/VAIL RESORTS SK 800-842-8062 CO"
+  },
+  {
+    "category": Category.ELECTRONICS,
+    "vendor": null,
+    "pattern": "SP ANKER US 8009887973 WA"
+  },
+  {
+    "category": Category.LUXURY_FOOD,
+    "vendor": null,
+    "pattern": "SP CABOT CREAMERY 40 SHATTUCK RD STE 301 ANDOVER 01810 MA USA"
+  },
+  {
+    "category": Category.MEDIA,
+    "vendor": null,
+    "pattern": "SP FALSE KNEES STORE 5144427857 CAN"
+  },
+  {
+    "category": Category.MISC,
+    "vendor": null,
+    "pattern": "SP FLAGS FOR GOOD"
+  },
+  {
+    "category": Category.GARDEN,
+    "vendor": null,
+    "pattern": "SP GARDEN FOR WILDLI"
+  },
+  {
+    "category": Category.GARDEN,
+    "vendor": null,
+    "pattern": "SP GREEN SHOOTS LLC 6512454682 MN"
+  },
+
+  {
+    "category": Category.HOME_HARDWARE,
+    "vendor": null,
+    "pattern": "WWW.HAMILTONBEACH.COM 8008518900 VA"
+  },
+  {
+    "category": Category.CHARITY,
+    "vendor": null,
+    "pattern": "WWW.THETRUSTEES.ORG"
+  },
+  {
+    "category": Category.MISC,
+    "vendor": null,
+    "pattern": "ZAZZLE INC"
+  },
+  {
+    "category": Category.HEALTH,
+    "vendor": null,
+    "pattern": "MELROSE WAKEFIELD RADI585 LEBANON ST MELROSE 02176 MA USA"
+  },
+  {
+    "category": Category.HOME_HARDWARE,
+    "vendor": null,
+    "pattern": "MICHAELS.COM 800-642-4235"
+  },
+  {
+    "category": Category.GIFTS,
+    "vendor": null,
+    "pattern": "PAYPAL *jo_fut 07/11 PMNT SENT Visa Direct CA"
+  },
+  {
+    "category": Category.HOME_HARDWARE,
+    "vendor": null,
+    "pattern": "POWERPARTS- 888-221-1161 UT"
+  },
+  {
+    "category": Category.DINING,
+    "vendor": null,
+    "pattern": "READING FOODS LLC"
+  },
+  {
+    "category": Category.ENTERTAINMENT,
+    "vendor": null,
+    "pattern": "RI ZOOLOGICAL SOC"
+  },
+
+  {
+    "category": Category.DINING,
+    "vendor": null,
+    "pattern": "SUMMIT STOWE VT"
+  },
+  {
+    "category": Category.LUXURY_FOOD,
+    "vendor": null,
+    "pattern": "THE CHOCOLATE TRUFFL"
+  },
+  {
+    "category": Category.TRAVEL,
+    "vendor": null,
+    "pattern": "TRAPP FAMILY LODGE"
+  },
+  {
+    "category": Category.MISC,
+    "vendor": null,
+    "pattern": "USPS PO 24833008 321 MAWAKEFIELD    MAUS"
+  },
+  {
+    "category": Category.HOME_HARDWARE,
+    "vendor": null,
+    "pattern": "LS THE COUNTRY STORE STOWE VT"
+  },
+  {
+    "category": Category.DINING,
+    "vendor": null,
+    "pattern": "LEAF AND GINGER WAKEFIELD MA"
+  },
+  {
+    "category": Category.MEDIA,
+    "vendor": null,
+    "pattern": "COMICALLY SPEAKING"
+  },
+  {
+    "category": Category.MEDIA,
+    "vendor": "Meesh",
+    "pattern": "COOKIE DOVES 4439860036 MD"
+  },
+  {
+    "category": Category.LUXURY_FOOD,
+    "vendor": null,
+    "pattern": "CRUMBL "
+  },
+  {
+    category: Category.MORTGAGE,
+    vendor: "Guild Mortgage",
+    pattern: "GUILD MORTGAGE",
+  },
+
 ];
 
 export default recognizers;
